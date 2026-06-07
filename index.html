@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaushik Somashekar | Digital Analytics Portfolio</title>
-  <meta name="description" content="Portfolio of Kaushik Somashekar - Digital Analytics, Web Analytics, Product Analytics, Marketing Analytics and Data Science professional based in London." />
+  <meta name="description" content="Digital Analytics, Marketing Analytics, Product Analytics and Customer Intelligence portfolio of Kaushik Somashekar." />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,380 +13,197 @@
 </head>
 
 <body>
-  <div class="progress-bar" id="progressBar"></div>
+  <div class="noise"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#home" class="logo">Kaushik<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-list" id="navList">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#expertise" class="nav-link">Expertise</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#portfolio" class="nav-link">Projects</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <a href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" class="resume-float" target="_blank" title="Upload resume PDF with this exact filename to enable this button">
-    Download Resume
-  </a>
+  <a href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" class="resume-pill" target="_blank">Resume ↓</a>
 
   <main>
-    <section id="home" class="hero section">
-      <div class="orb orb-one"></div>
-      <div class="orb orb-two"></div>
-
+    <section class="hero" id="home">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
       <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <p class="eyebrow">Digital Analytics • Web Analytics • Product Analytics • Marketing Analytics</p>
-          <h1>£10M+ revenue impact through analytics, attribution and experimentation.</h1>
-          <p class="hero-subtitle">
-            I am Kaushik Somashekar, a London-based Digital Analyst and Marketing Data Analyst with 5+ years
-            across retail, fintech, AI/product companies, education and hospitality.
+        <div class="hero-copy reveal">
+          <p class="kicker">Digital Analytics • Customer Intelligence • Marketing Science</p>
+          <h1>Hi, I'm <span>Kaushik</span> — I turn digital behaviour into business growth.</h1>
+          <p class="hero-text">
+            Senior Digital Analytics & Marketing Analytics professional with 5+ years across retail,
+            ecommerce, product analytics, tracking implementation, attribution, experimentation and customer intelligence.
           </p>
-
           <div class="hero-actions">
-            <a href="#portfolio" class="btn primary">Explore Portfolio</a>
-            <a href="#impact" class="btn ghost">View Impact</a>
-            <a href="mailto:kaushiksomashekar@gmail.com" class="btn ghost">Contact Me</a>
+            <a href="#projects" class="btn primary">View Portfolio</a>
+            <a href="#impact" class="btn secondary">See Impact</a>
+            <a href="mailto:kaushiksomashekar@gmail.com" class="btn subtle">Contact</a>
           </div>
-
-          <div class="hero-meta">
-            <span>GA4</span>
-            <span>Adobe Analytics / CJA</span>
-            <span>GTM & Tealium</span>
-            <span>Snowflake</span>
-            <span>BigQuery</span>
+          <div class="tool-strip">
+            <span>GA4</span><span>Adobe CJA</span><span>GTM</span><span>Tealium</span><span>Snowflake</span><span>BigQuery</span><span>Python</span><span>SQL</span>
           </div>
         </div>
 
-        <aside class="hero-card reveal delay-1">
-          <div class="profile-wrap">
-            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-photo" onerror="this.style.display='none';document.querySelector('.profile-fallback').style.display='grid';">
-            <div class="profile-fallback">KS</div>
+        <aside class="profile-panel reveal delay-1">
+          <div class="profile-image-shell">
+            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-photo" onerror="this.style.display='none';document.querySelector('.photo-fallback').style.display='grid';">
+            <div class="photo-fallback">KS</div>
           </div>
           <h2>Kaushik Somashekar</h2>
-          <p>Digital Analyst | Web Analyst | Product Analyst | Marketing Data Analyst</p>
-          <div class="status-pill">Available for analytics opportunities</div>
-          <div class="card-stats">
-            <div><strong>5+</strong><span>Years</span></div>
-            <div><strong>12</strong><span>GitHub Repos</span></div>
-            <div><strong>London</strong><span>UK</span></div>
+          <p>Digital Analyst • Product Analyst • Marketing Data Analyst</p>
+          <div class="availability">London, UK • Open to analytics roles</div>
+          <div class="profile-mini-grid">
+            <div><b>£10M+</b><span>Revenue Impact</span></div>
+            <div><b>5M+</b><span>Sessions Analysed</span></div>
           </div>
         </aside>
       </div>
-
-      <a href="#impact" class="scroll-cue">Scroll Down <strong>↓</strong></a>
+      <a href="#impact" class="scroll-down">Scroll Down <b>↓</b></a>
     </section>
 
-    <section id="impact" class="section compact">
+    <section class="section impact-section" id="impact">
       <div class="container">
-        <div class="section-head reveal">
-          <span>Business Impact</span>
-          <h2>Evidence-led analytics outcomes</h2>
-          <p>Selected measurable outcomes from my professional analytics experience.</p>
+        <div class="section-title reveal">
+          <p>Impact Dashboard</p>
+          <h2>Commercial outcomes, not just reporting.</h2>
         </div>
-
-        <div class="impact-grid">
-          <div class="impact-card reveal"><strong>£10M+</strong><span>Revenue impact through full-funnel analytics and CRO</span></div>
-          <div class="impact-card reveal delay-1"><strong>5M+</strong><span>Monthly sessions analysed across digital journeys</span></div>
-          <div class="impact-card reveal delay-2"><strong>20+</strong><span>Automated KPI dashboards built for stakeholders</span></div>
-          <div class="impact-card reveal"><strong>50+</strong><span>GTM and Tealium tracking validations</span></div>
-          <div class="impact-card reveal delay-1"><strong>15%</strong><span>Campaign performance uplift through segmentation</span></div>
-          <div class="impact-card reveal delay-2"><strong>12%</strong><span>Marketing ROI improvement through budget reallocation</span></div>
+        <div class="impact-dashboard">
+          <div class="metric-card reveal"><span class="counter" data-target="10">0</span><small>£M+ Revenue Impact</small></div>
+          <div class="metric-card reveal delay-1"><span class="counter" data-target="5">0</span><small>M+ Monthly Sessions</small></div>
+          <div class="metric-card reveal delay-2"><span class="counter" data-target="20">0</span><small>Executive Dashboards</small></div>
+          <div class="metric-card reveal"><span class="counter" data-target="50">0</span><small>Tracking Validations</small></div>
+          <div class="metric-card reveal delay-1"><span class="counter" data-target="15">0</span><small>% Campaign Uplift</small></div>
+          <div class="metric-card reveal delay-2"><span class="counter" data-target="12">0</span><small>% ROI Improvement</small></div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section soft">
-      <div class="container about-grid">
-        <div class="section-head reveal">
-          <span>About Me</span>
-          <h2>Customer behaviour → insight → growth strategy</h2>
+    <section class="section split-section" id="about">
+      <div class="container split-grid">
+        <div class="section-title reveal">
+          <p>About Me</p>
+          <h2>Analytics that connects product, marketing and customer experience.</h2>
         </div>
-
-        <div class="about-copy reveal delay-1">
+        <div class="about-card reveal delay-1">
           <p>
-            I specialise in transforming behavioural data into clear business recommendations that improve
-            conversion, retention, acquisition efficiency and marketing ROI.
+            I am a London-based Digital Analytics and Marketing Analytics professional with experience across
+            Sainsbury's UK, BYJU'S, UWE Bristol, Icon Hotels and Bosch.
           </p>
           <p>
-            My experience spans Sainsbury's UK, UWE Bristol, Icon Hotels, BYJU'S and Bosch, where I worked across
-            full-funnel analytics, marketing attribution, Marketing Mix Modelling, experimentation, tracking implementation,
-            SEO analytics, dashboards and stakeholder reporting.
+            I specialise in full-funnel analytics, CRO, attribution, MMM, A/B experimentation, tracking implementation,
+            executive dashboards, SEO analytics and customer intelligence.
           </p>
-          <p>
-            I combine technical depth in SQL, Python, Snowflake, BigQuery, GA4, Adobe Analytics, Customer Journey Analytics,
-            GTM, Tealium, Tableau and Power BI with strong commercial storytelling.
-          </p>
+          <div class="about-focus">
+            <span>Attribution</span><span>MMM</span><span>CRO</span><span>Experimentation</span><span>Journey Analytics</span><span>Customer Intelligence</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="expertise" class="section">
+    <section class="section dark-card-section" id="expertise">
       <div class="container">
-        <div class="section-head reveal">
-          <span>Core Expertise</span>
-          <h2>What I bring to analytics teams</h2>
-          <p>Built around digital analytics, marketing effectiveness, product insights and data science.</p>
+        <div class="section-title centered reveal">
+          <p>Expertise</p>
+          <h2>Built for modern analytics teams.</h2>
         </div>
-
         <div class="expertise-grid">
-          <article class="expertise-card reveal">
-            <div class="expertise-icon">01</div>
-            <h3>Digital & Web Analytics</h3>
-            <p>GA4, Adobe Analytics, Customer Journey Analytics, Hotjar, funnel analysis, CRO and behavioural insights.</p>
-          </article>
-          <article class="expertise-card reveal delay-1">
-            <div class="expertise-icon">02</div>
-            <h3>Tracking & Implementation</h3>
-            <p>GTM, Tealium, Firebase, Adobe Launch, Floodlight, tracking plans, tag QA and implementation governance.</p>
-          </article>
-          <article class="expertise-card reveal delay-2">
-            <div class="expertise-icon">03</div>
-            <h3>Marketing Analytics</h3>
-            <p>Attribution, MMM, ROAS, CPA, SEO, SEM/PPC, paid social, email, affiliate and budget optimisation.</p>
-          </article>
-          <article class="expertise-card reveal">
-            <div class="expertise-icon">04</div>
-            <h3>Product Analytics</h3>
-            <p>User journeys, feature behaviour, conversion funnels, failure-state cohorts, retention and UX friction analysis.</p>
-          </article>
-          <article class="expertise-card reveal delay-1">
-            <div class="expertise-icon">05</div>
-            <h3>BI & Data Platforms</h3>
-            <p>Snowflake, BigQuery, GCP, MySQL, PostgreSQL, Tableau, Power BI, Looker and Looker Studio.</p>
-          </article>
-          <article class="expertise-card reveal delay-2">
-            <div class="expertise-icon">06</div>
-            <h3>Python & Data Science</h3>
-            <p>Pandas, NumPy, scikit-learn, segmentation, churn, CLV, propensity models and recommendation systems.</p>
-          </article>
+          <article class="expert-card reveal"><i>01</i><h3>Digital Analytics</h3><p>GA4, Adobe Analytics, CJA, Hotjar, web journeys, funnel analysis and CRO.</p></article>
+          <article class="expert-card reveal delay-1"><i>02</i><h3>Tracking Implementation</h3><p>GTM, Tealium, Firebase, Adobe Launch, Floodlight, QA and tag governance.</p></article>
+          <article class="expert-card reveal delay-2"><i>03</i><h3>Marketing Analytics</h3><p>MMM, attribution, ROAS, CPA, SEO, PPC, paid social, email and affiliate.</p></article>
+          <article class="expert-card reveal"><i>04</i><h3>Product Analytics</h3><p>User journeys, cohorts, retention, conversion funnels and failure-state analysis.</p></article>
+          <article class="expert-card reveal delay-1"><i>05</i><h3>BI & Data</h3><p>Snowflake, BigQuery, SQL, Tableau, Power BI, Looker and dashboard automation.</p></article>
+          <article class="expert-card reveal delay-2"><i>06</i><h3>Data Science</h3><p>Segmentation, churn, CLV, propensity models, recommendation engines and Python ML.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section soft">
+    <section class="section timeline-section" id="experience">
       <div class="container">
-        <div class="section-head reveal">
-          <span>Experience</span>
-          <h2>Professional timeline</h2>
-          <p>Focused on measurable impact, analytics implementation and growth strategy.</p>
+        <div class="section-title reveal">
+          <p>Experience</p>
+          <h2>Timeline of measurable analytics impact.</h2>
         </div>
-
         <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-year">2023 – Present</div>
-            <div class="timeline-content">
-              <h3>Digital Analyst — Sainsbury's UK</h3>
-              <p>Full-funnel analytics across 5M+ monthly sessions, Adobe Analytics/CJA, GA4, Snowflake, MMM, attribution and tracking governance.</p>
-              <ul>
-                <li>£10M+ revenue impact through CRO, SEO and checkout funnel optimisation.</li>
-                <li>12% marketing ROI improvement via MMM and budget reallocation.</li>
-                <li>20+ automated KPI dashboards and 50+ GTM/Tealium tag validations.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-year">2023</div>
-            <div class="timeline-content">
-              <h3>Digital Analyst — University of West of England Bristol</h3>
-              <p>GA/GTM tracking, A/B and multivariate experimentation, BigQuery automation, attribution and campaign reporting.</p>
-              <ul>
-                <li>15% increase in campaign conversions and 7% landing-page conversion lift.</li>
-                <li>40% reduction in report preparation through BigQuery views.</li>
-                <li>9% organic traffic increase through SEO keyword and content-gap analysis.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-year">2022 – 2023</div>
-            <div class="timeline-content">
-              <h3>Marketing Data Analyst — Icon Hotels</h3>
-              <p>Cross-domain GTM tracking, GA4 journeys, affiliate analytics, Tableau/Looker dashboards and campaign ROI analysis.</p>
-              <ul>
-                <li>7% conversion increase and 14% drop-off reduction.</li>
-                <li>$350K saved in inefficient paid spend through ROI recommendations.</li>
-                <li>13% qualified lead increase through content and SEO insights.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-year">2020 – 2021</div>
-            <div class="timeline-content">
-              <h3>Digital Data Analyst — BYJU'S</h3>
-              <p>A/B testing, audience segmentation, GA/Floodlight/GTM implementation, SQL funnel analysis and BigQuery ETL pipelines.</p>
-              <ul>
-                <li>18% revenue increase from optimised campaign targeting.</li>
-                <li>15% engagement boost through targeted audience segmentation.</li>
-                <li>99%+ tracking accuracy across key web and mobile funnels.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-year">2018</div>
-            <div class="timeline-content">
-              <h3>Data Analyst Intern — Bosch</h3>
-              <p>Google Data Studio dashboards, lead tracking, GA/HubSpot analysis, keyword optimisation and social KPI reporting.</p>
-              <ul>
-                <li>12% campaign ROI improvement and 15% CTR increase.</li>
-                <li>1,000+ lead tracking dashboard built for marketing performance.</li>
-              </ul>
-            </div>
-          </article>
+          <div class="timeline-card reveal"><span>2023 — Present</span><h3>Sainsbury's UK</h3><p>£10M+ revenue impact, 5M+ monthly sessions, MMM, attribution, CRO, Adobe Analytics/CJA, Snowflake and tracking governance.</p></div>
+          <div class="timeline-card reveal"><span>2023</span><h3>UWE Bristol</h3><p>15% campaign conversion increase, BigQuery automation, A/B testing, attribution and SEO analytics.</p></div>
+          <div class="timeline-card reveal"><span>2022 — 2023</span><h3>Icon Hotels</h3><p>7% conversion uplift, 14% drop-off reduction, GA4 journeys, cross-domain GTM and $350K spend optimisation.</p></div>
+          <div class="timeline-card reveal"><span>2020 — 2021</span><h3>BYJU'S</h3><p>18% revenue increase, A/B testing, audience segmentation, GTM/Floodlight implementation and BigQuery ETL.</p></div>
+          <div class="timeline-card reveal"><span>2018</span><h3>Bosch</h3><p>Google Data Studio lead dashboard, GA/HubSpot analysis, keyword optimisation and 12% campaign ROI improvement.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio" class="section">
+    <section class="section projects-section" id="projects">
       <div class="container">
-        <div class="section-head reveal">
-          <span>GitHub Portfolio</span>
-          <h2>Projects mapped to real analytics problems</h2>
-          <p>Each project is designed with data, notebooks, reports, README documentation and business recommendations.</p>
+        <div class="section-title centered reveal">
+          <p>Featured Projects</p>
+          <h2>Portfolio projects aligned to real business problems.</h2>
         </div>
 
-        <div class="filter-row reveal">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="digital">Digital Analytics</button>
-          <button class="filter" data-filter="marketing">Marketing</button>
-          <button class="filter" data-filter="science">Data Science</button>
+        <div class="project-tabs reveal">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="digital">Digital Analytics</button>
+          <button class="tab" data-filter="marketing">Marketing</button>
+          <button class="tab" data-filter="science">Data Science</button>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card reveal" data-category="marketing">
-            <div class="project-label">Marketing Analytics</div>
-            <h3>Campaign Performance Analytics Dashboard</h3>
-            <p>Dashboard-ready analysis of spend, revenue, ROAS, CPA, CTR, CVR and performance marketing optimisation.</p>
-            <div class="project-stack">Python • Pandas • Dashboarding • ROAS</div>
-            <a href="https://github.com/kaushiks1/campaign_performance_analytics_dashboard" target="_blank">Open GitHub →</a>
-          </article>
+        <div class="featured-grid">
+          <article class="project-card reveal" data-category="marketing"><div class="project-number">01</div><h3>Campaign Performance Analytics Dashboard</h3><p>Executive-ready marketing performance dashboard across ROAS, CPA, CTR, CVR, spend and revenue.</p><div class="stack">Python • Pandas • Dashboarding</div><a href="https://github.com/kaushiks1/campaign_performance_analytics_dashboard" target="_blank">View GitHub →</a></article>
+          <article class="project-card reveal" data-category="science"><div class="project-number">02</div><h3>Product Recommendation Engine</h3><p>Collaborative filtering, content-based recommendations and basket cross-sell strategy.</p><div class="stack">Python • Cosine Similarity • ML</div><a href="https://github.com/kaushiks1/product_recommendation_engine" target="_blank">View GitHub →</a></article>
+          <article class="project-card reveal" data-category="digital"><div class="project-number">03</div><h3>Customer Journey Path Analysis</h3><p>Path analysis, transition matrix, channel presence and drop-off recommendations.</p><div class="stack">Journey Analytics • Python</div><a href="https://github.com/kaushiks1/customer_journey_path_analysis" target="_blank">View GitHub →</a></article>
+          <article class="project-card reveal" data-category="science"><div class="project-number">04</div><h3>Propensity to Purchase Model</h3><p>Visitor scoring model for CRM, remarketing and onsite personalisation strategies.</p><div class="stack">Random Forest • Lead Scoring</div><a href="https://github.com/kaushiks1/propensity_to_purchase_model" target="_blank">View GitHub →</a></article>
+          <article class="project-card reveal" data-category="digital"><div class="project-number">05</div><h3>GA4 Ecommerce Funnel Analysis</h3><p>GA4-style ecommerce funnel from session_start to purchase with source and device insights.</p><div class="stack">GA4 • Funnel Analysis</div><a href="https://github.com/kaushiks1/ga4_ecommerce_funnel_analysis" target="_blank">View GitHub →</a></article>
+          <article class="project-card reveal" data-category="marketing"><div class="project-number">06</div><h3>Marketing Mix Modelling</h3><p>Marketing effectiveness and media optimisation project focused on ROI and channel contribution.</p><div class="stack">MMM • ROI • Python</div><a href="https://github.com/kaushiks1/Marketing-mix-modelling" target="_blank">View GitHub →</a></article>
+        </div>
 
-          <article class="project-card reveal" data-category="science">
-            <div class="project-label">Data Science</div>
-            <h3>Product Recommendation Engine</h3>
-            <p>Collaborative filtering, content-based recommendations and frequently-bought-together analysis for ecommerce.</p>
-            <div class="project-stack">Python • Cosine Similarity • Personalisation</div>
-            <a href="https://github.com/kaushiks1/product_recommendation_engine" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="science">
-            <div class="project-label">Machine Learning</div>
-            <h3>Propensity to Purchase Model</h3>
-            <p>Scores visitors by likelihood to purchase within 7 days for CRM, retargeting and onsite personalisation.</p>
-            <div class="project-stack">Python • Random Forest • Lead Scoring</div>
-            <a href="https://github.com/kaushiks1/propensity_to_purchase_model" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="digital">
-            <div class="project-label">Journey Analytics</div>
-            <h3>Customer Journey Path Analysis</h3>
-            <p>Analyzes conversion paths, transition probabilities, drop-offs and channel presence impact.</p>
-            <div class="project-stack">Python • Path Analysis • Transition Matrix</div>
-            <a href="https://github.com/kaushiks1/customer_journey_path_analysis" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="digital">
-            <div class="project-label">GA4 Analytics</div>
-            <h3>GA4 Ecommerce Funnel Analysis</h3>
-            <p>GA4-style event and session funnel analysis from session_start to purchase with device and source insights.</p>
-            <div class="project-stack">Python • GA4 • Funnel Analysis</div>
-            <a href="https://github.com/kaushiks1/ga4_ecommerce_funnel_analysis" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="digital">
-            <div class="project-label">Experimentation</div>
-            <h3>A/B Testing Framework</h3>
-            <p>Experiment analysis using conversion lift, confidence intervals, significance testing and sample sizing.</p>
-            <div class="project-stack">Python • Statsmodels • CRO</div>
-            <a href="https://github.com/kaushiks1/web_ab_testing_framework" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="science">
-            <div class="project-label">Machine Learning</div>
-            <h3>Customer Churn Prediction</h3>
-            <p>Predicts churn probability and creates risk-tier retention strategies for CRM and lifecycle marketing.</p>
-            <div class="project-stack">Python • Classification • Retention</div>
-            <a href="https://github.com/kaushiks1/customer_churn_prediction" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="science">
-            <div class="project-label">Customer Intelligence</div>
-            <h3>Customer Lifetime Value Prediction</h3>
-            <p>Predicts 12-month CLV using ecommerce, retention, engagement and margin features.</p>
-            <div class="project-stack">Python • CLV • Random Forest</div>
-            <a href="https://github.com/kaushiks1/customer_lifetime_value_prediction" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="marketing">
-            <div class="project-label">Marketing Effectiveness</div>
-            <h3>Marketing Mix Modelling</h3>
-            <p>Marketing contribution and media optimisation project focused on revenue, spend and channel efficiency.</p>
-            <div class="project-stack">Python • MMM • ROI</div>
-            <a href="https://github.com/kaushiks1/Marketing-mix-modelling" target="_blank">Open GitHub →</a>
-          </article>
-
-          <article class="project-card reveal" data-category="science">
-            <div class="project-label">Segmentation</div>
-            <h3>Online Web Customer Segmentation</h3>
-            <p>K-Means segmentation of online customers using web analytics, engagement and purchase behaviour.</p>
-            <div class="project-stack">Python • K-Means • Customer Analytics</div>
-            <a href="https://github.com/kaushiks1/Online_web_customer_segmentation_ML" target="_blank">Open GitHub →</a>
-          </article>
+        <div class="github-cta reveal">
+          <p>Want to see every project repository?</p>
+          <a href="https://github.com/kaushiks1?tab=repositories" target="_blank" class="btn primary">View All GitHub Repositories</a>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section soft">
+    <section class="section skills-section">
       <div class="container">
-        <div class="section-head reveal">
-          <span>Technical Skills</span>
-          <h2>Tools and platforms</h2>
-        </div>
-
-        <div class="skills-cloud reveal">
-          <span>GA4</span><span>Adobe Analytics</span><span>Customer Journey Analytics</span><span>GTM</span><span>Tealium</span>
-          <span>Firebase</span><span>Adobe Launch</span><span>Google Optimize</span><span>Hotjar</span><span>SQL</span>
-          <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span>
-          <span>Snowflake</span><span>BigQuery</span><span>GCP</span><span>MySQL</span><span>PostgreSQL</span>
-          <span>Fivetran</span><span>dbt</span><span>Tableau</span><span>Power BI</span><span>Looker</span><span>Looker Studio</span>
-          <span>SEO</span><span>PPC</span><span>Meta Ads</span><span>Google Ads</span><span>YouTube Ads</span><span>Email</span><span>Affiliate</span>
+        <div class="section-title reveal"><p>Skills Matrix</p><h2>Technical stack.</h2></div>
+        <div class="skill-cloud reveal">
+          <span>GA4</span><span>Adobe Analytics</span><span>CJA</span><span>GTM</span><span>Tealium</span><span>Firebase</span><span>Adobe Launch</span><span>Google Optimize</span><span>Hotjar</span><span>SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Snowflake</span><span>BigQuery</span><span>GCP</span><span>Fivetran</span><span>dbt</span><span>Tableau</span><span>Power BI</span><span>Looker</span><span>SEO</span><span>PPC</span><span>Paid Social</span><span>Email</span><span>Affiliate</span>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div>
-            <span>Contact</span>
-            <h2>Let's build data-driven growth.</h2>
-            <p>Open to Digital Analyst, Web Analyst, Product Analyst, Marketing Data Analyst and Analytics Data Science roles.</p>
-          </div>
-          <div class="contact-links">
-            <a href="mailto:kaushiksomashekar@gmail.com">kaushiksomashekar@gmail.com</a>
-            <a href="https://www.linkedin.com/in/kaushik-somashekar/" target="_blank">linkedin.com/in/kaushik-somashekar</a>
-            <a href="https://github.com/kaushiks1" target="_blank">github.com/kaushiks1</a>
-            <p>London, United Kingdom</p>
-            <p>+44 7436876417</p>
-          </div>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>Let's build data-driven growth.</h2>
+          <p>Open to Digital Analyst, Web Analyst, Product Analyst, Marketing Data Analyst and Analytics Data Science roles.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:kaushiksomashekar@gmail.com">kaushiksomashekar@gmail.com</a>
+          <a href="https://www.linkedin.com/in/kaushik-somashekar/" target="_blank">linkedin.com/in/kaushik-somashekar</a>
+          <a href="https://github.com/kaushiks1" target="_blank">github.com/kaushiks1</a>
+          <span>London, United Kingdom</span>
+          <span>+44 7436876417</span>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2026 Kaushik Somashekar. Portfolio built for Digital Analytics, Marketing Analytics and Data Science opportunities.</p>
-  </footer>
+  <footer class="footer">© 2026 Kaushik Somashekar. Digital Analytics Portfolio.</footer>
 </body>
 </html>

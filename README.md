@@ -1,10 +1,10 @@
-# Kaushik Somashekar Portfolio Website
+# Kaushik V2 Visual Portfolio
 
-Resume-tailored, futuristic GitHub Pages portfolio for Digital Analytics, Web Analytics, Product Analytics, Marketing Analytics and Data Science.
+This is the improved Version 2 portfolio package.
 
-## Upload Instructions
+## Upload to GitHub
 
-Upload these files to the root of your `kaushiks1.github.io` repository:
+Replace these files in your `kaushiks1.github.io` repository:
 
 ```text
 index.html
@@ -13,26 +13,20 @@ script.js
 README.md
 ```
 
-Also upload:
+Also keep/upload your photo as:
 
 ```text
 kaushik.jpg
+```
+
+The profile photo has been made smaller and cleaner.
+
+## Resume Button
+
+For the floating resume button to work, upload your resume PDF to the repository root with this exact name:
+
+```text
 KAUSHIK_SOMASHEKAR_3026_1 2.pdf
 ```
 
-The photo and resume file names must match exactly, or update the file paths in `index.html`.
-
-## Live Site
-
-```text
-https://kaushiks1.github.io
-```
-
-## Customise
-
-Edit `index.html` to update:
-- LinkedIn URL
-- Phone number
-- Email
-- Project links
-- Experience wording
+Or edit the resume link in `index.html`.
