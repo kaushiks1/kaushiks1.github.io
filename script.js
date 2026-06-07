@@ -1,5 +1,23 @@
-const navLinks=document.querySelector('.nav-links');document.querySelector('.menu-toggle').addEventListener('click',()=>navLinks.classList.toggle('open'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
-const track=document.getElementById('skillsTrack');document.getElementById('skillNext').addEventListener('click',()=>track.scrollBy({left:430,behavior:'smooth'}));document.getElementById('skillPrev').addEventListener('click',()=>track.scrollBy({left:-430,behavior:'smooth'}));
-let isDown=false,startX,scrollLeft;track.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-track.offsetLeft;scrollLeft=track.scrollLeft});track.addEventListener('mouseleave',()=>isDown=false);track.addEventListener('mouseup',()=>isDown=false);track.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-track.offsetLeft;track.scrollLeft=scrollLeft-(x-startX)*1.5});
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const glow=document.querySelector('.cursor-glow');window.addEventListener('mousemove',e=>{glow.style.transform=`translate(${e.clientX-220}px,${e.clientY-220}px)`});
+const menu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+menu?.addEventListener('click', () => nav.classList.toggle('open'));
+
+document.querySelectorAll('.carousel-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.carousel === 'skills' ? 'skills-track' : 'projects-track';
+    const track = document.getElementById(id);
+    const dir = btn.dataset.dir === 'left' ? -1 : 1;
+    track.scrollBy({ left: dir * Math.min(620, track.clientWidth * .75), behavior: 'smooth' });
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => nav.classList.remove('open'));
+});
