@@ -1,32 +1,14 @@
-# Kaushik V2 Visual Portfolio
+# Kaushik Somashekar Premium Portfolio
 
-This is the improved Version 2 portfolio package.
+Final GitHub Pages portfolio package.
 
-## Upload to GitHub
+Upload these files to the root of `kaushiks1.github.io`:
 
-Replace these files in your `kaushiks1.github.io` repository:
+- index.html
+- style.css
+- script.js
+- README.md
 
-```text
-index.html
-style.css
-script.js
-README.md
-```
+Also upload your profile photo as `kaushik.jpg`.
 
-Also keep/upload your photo as:
-
-```text
-kaushik.jpg
-```
-
-The profile photo has been made smaller and cleaner.
-
-## Resume Button
-
-For the floating resume button to work, upload your resume PDF to the repository root with this exact name:
-
-```text
-KAUSHIK_SOMASHEKAR_3026_1 2.pdf
-```
-
-Or edit the resume link in `index.html`.
+For the resume button, upload your resume PDF as `KAUSHIK_SOMASHEKAR_3026_1 2.pdf`, or edit the link in `index.html`.
