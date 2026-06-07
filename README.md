@@ -1,35 +1,22 @@
-# Kaushik Somashekar Final Human Portfolio
+# Kaushik Somashekar Portfolio
 
-A professional Lovable-style portfolio with:
-- Dark teal theme
-- Hero + profile card
-- Skills carousel
-- Impact cards
-- About section
-- Expertise cards
-- Experience timeline
-- Project carousel
-- Contact card
+A responsive GitHub Pages portfolio for a Digital Analyst, Product Analyst and Marketing Data Analyst.
 
-## Upload to GitHub
+## Upload to GitHub Pages
 
-Replace these files in your `kaushiks1.github.io` repository:
+1. Create or open your GitHub repository.
+2. Upload `index.html`, `styles.css`, `script.js`, and the `assets` folder to the repository root.
+3. Go to Settings → Pages.
+4. Select Deploy from branch → main → root.
+5. Save and wait for GitHub Pages to publish.
 
-```text
-index.html
-style.css
-script.js
-README.md
-```
+## Update before publishing
 
-Keep your profile photo named:
+- Replace `assets/Kaushik-Somashekar-CV.pdf` with your real CV using the same filename.
+- Update the LinkedIn URL in `index.html`.
+- Replace project descriptions and experience details with your final content.
+- To use a real profile photo, add it to `assets/profile.jpg` and replace the avatar block in `index.html` with:
 
-```text
-kaushik.jpg
-```
-
-Upload resume as:
-
-```text
-KAUSHIK_SOMASHEKAR_3026_1 2.pdf
+```html
+<img src="assets/profile.jpg" alt="Kaushik Somashekar" class="profile-photo" />
 ```
