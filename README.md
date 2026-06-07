@@ -1,51 +1,38 @@
 # Kaushik Somashekar Portfolio Website
 
-This is a GitHub Pages portfolio website for Digital Analytics, Product Analytics, Marketing Analytics, Data Analytics, and Data Science projects.
+Resume-tailored, futuristic GitHub Pages portfolio for Digital Analytics, Web Analytics, Product Analytics, Marketing Analytics and Data Science.
 
-## How to Publish
+## Upload Instructions
 
-1. Create a GitHub repository named exactly:
-
-```text
-kaushiks1.github.io
-```
-
-2. Upload these files:
+Upload these files to the root of your `kaushiks1.github.io` repository:
 
 ```text
 index.html
 style.css
 script.js
-assets/
 README.md
 ```
 
-3. Go to:
+Also upload:
 
 ```text
-Settings → Pages
+kaushik.jpg
+KAUSHIK_SOMASHEKAR_3026_1 2.pdf
 ```
 
-4. Select:
+The photo and resume file names must match exactly, or update the file paths in `index.html`.
 
-```text
-Deploy from branch
-Branch: main
-Folder: /root
-```
-
-5. Your live website will be:
+## Live Site
 
 ```text
 https://kaushiks1.github.io
 ```
 
-## Customize
+## Customise
 
-Update these links in `index.html`:
-
-- GitHub profile
-- LinkedIn profile
-- Project repository links
-- Resume file path
-- Profile photo
+Edit `index.html` to update:
+- LinkedIn URL
+- Phone number
+- Email
+- Project links
+- Experience wording
