@@ -1,14 +1,28 @@
-# Kaushik Somashekar Premium Portfolio
+# Kaushik Somashekar Portfolio
 
-Final GitHub Pages portfolio package.
+This version is built to match the approved screenshot layout closely.
 
-Upload these files to the root of `kaushiks1.github.io`:
+## Upload to GitHub
 
-- index.html
-- style.css
-- script.js
-- README.md
+Replace these files in your `kaushiks1.github.io` repository:
 
-Also upload your profile photo as `kaushik.jpg`.
+```text
+index.html
+style.css
+script.js
+README.md
+```
 
-For the resume button, upload your resume PDF as `KAUSHIK_SOMASHEKAR_3026_1 2.pdf`, or edit the link in `index.html`.
+Also keep your photo as:
+
+```text
+kaushik.jpg
+```
+
+For the resume button, upload your PDF as:
+
+```text
+KAUSHIK_SOMASHEKAR_3026_1 2.pdf
+```
+
+or edit the resume filename in `index.html`.

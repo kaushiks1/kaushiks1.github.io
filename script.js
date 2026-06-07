@@ -1,1 +1,127 @@
-const header=document.getElementById("header"),menuBtn=document.getElementById("menuBtn"),navLinksWrap=document.getElementById("navLinks"),scrollProgress=document.getElementById("scrollProgress");menuBtn?.addEventListener("click",()=>{navLinksWrap.classList.toggle("open"),document.body.classList.toggle("menu-open")});document.querySelectorAll(".nav-link").forEach(e=>{e.addEventListener("click",()=>{navLinksWrap.classList.remove("open"),document.body.classList.remove("menu-open")})});window.addEventListener("scroll",()=>{header.classList.toggle("scrolled",window.scrollY>20);const e=document.documentElement.scrollHeight-window.innerHeight;scrollProgress.style.width=`${window.scrollY/e*100}%`,updateActiveNav()});const sections=document.querySelectorAll("section[id]"),navLinks=document.querySelectorAll(".nav-link");function updateActiveNav(){let e="home";sections.forEach(t=>{window.scrollY>=t.offsetTop-130&&(e=t.id)}),navLinks.forEach(t=>t.classList.toggle("active",t.getAttribute("href")===`#${e}`))}const revealObserver=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("show"),revealObserver.unobserve(e.target))})},{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>revealObserver.observe(e));const skillsTrack=document.getElementById("skillsTrack"),skillPrev=document.getElementById("skillPrev"),skillNext=document.getElementById("skillNext"),skillDots=document.getElementById("skillDots");let skillPage=0;const skillItemsPerPage=6,totalSkillItems=document.querySelectorAll(".skill-icon").length,totalSkillPages=Math.ceil(totalSkillItems/skillItemsPerPage);function renderSkillDots(){skillDots.innerHTML="";for(let e=0;e<totalSkillPages;e++){const t=document.createElement("span");t.className=e===skillPage?"active":"",t.addEventListener("click",()=>{skillPage=e,updateSkills()}),skillDots.appendChild(t)}}function updateSkills(){const e=document.querySelector(".skill-icon");if(!e)return;const t=skillPage*skillItemsPerPage*(e.offsetWidth+11);skillsTrack.style.transform=`translateX(-${t}px)`,renderSkillDots()}skillNext?.addEventListener("click",()=>{skillPage=(skillPage+1)%totalSkillPages,updateSkills()}),skillPrev?.addEventListener("click",()=>{skillPage=(skillPage-1+totalSkillPages)%totalSkillPages,updateSkills()}),setInterval(()=>{skillPage=(skillPage+1)%totalSkillPages,updateSkills()},3200),renderSkillDots();const projectTrack=document.getElementById("projectTrack"),projectPrev=document.getElementById("projectPrev"),projectNext=document.getElementById("projectNext"),projectDots=document.getElementById("projectDots");let projectIndex=0;function getCardsVisible(){return window.innerWidth<760?1:window.innerWidth<1100?3:6}function totalProjectPages(){return Math.max(1,Math.ceil(document.querySelectorAll(".project-card").length/getCardsVisible()))}function renderProjectDots(){projectDots.innerHTML="";for(let e=0;e<totalProjectPages();e++){const t=document.createElement("span");t.className=e===projectIndex?"active":"",t.addEventListener("click",()=>{projectIndex=e,updateProjects()}),projectDots.appendChild(t)}}function updateProjects(){const e=document.querySelector(".project-card");if(!e)return;const t=projectIndex*getCardsVisible()*(e.offsetWidth+16);projectTrack.style.transform=`translateX(-${t}px)`,renderProjectDots()}projectNext?.addEventListener("click",()=>{projectIndex=(projectIndex+1)%totalProjectPages(),updateProjects()}),projectPrev?.addEventListener("click",()=>{projectIndex=(projectIndex-1+totalProjectPages())%totalProjectPages(),updateProjects()}),setInterval(()=>{projectIndex=(projectIndex+1)%totalProjectPages(),updateProjects()},5200),window.addEventListener("resize",()=>{projectIndex=0,updateSkills(),updateProjects()}),updateProjects(),updateActiveNav();
+const topbar = document.getElementById("topbar");
+const progress = document.getElementById("pageProgress");
+const mobileToggle = document.getElementById("mobileToggle");
+const navMenu = document.getElementById("navMenu");
+
+mobileToggle?.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => navMenu.classList.remove("open"));
+});
+
+window.addEventListener("scroll", () => {
+  topbar.classList.toggle("scrolled", window.scrollY > 20);
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${(window.scrollY / max) * 100}%`;
+  updateActiveNav();
+});
+
+const sections = document.querySelectorAll("section[id], main[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function updateActiveNav(){
+  let current = "home";
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 130) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+  });
+}
+
+/* Reveal */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+/* Skills carousel */
+const skillTrack = document.getElementById("skillTrack");
+const skillPrev = document.getElementById("skillPrev");
+const skillNext = document.getElementById("skillNext");
+const skillDots = document.getElementById("skillDots");
+let skillPage = 0;
+
+function skillsPerPage(){ return window.innerWidth < 760 ? 4 : 6; }
+function skillPages(){ return Math.ceil(document.querySelectorAll(".skill-item").length / skillsPerPage()); }
+
+function drawSkillDots(){
+  skillDots.innerHTML = "";
+  for(let i=0;i<skillPages();i++){
+    const dot = document.createElement("span");
+    dot.className = i === skillPage ? "active" : "";
+    dot.onclick = () => { skillPage = i; updateSkills(); };
+    skillDots.appendChild(dot);
+  }
+}
+function updateSkills(){
+  const item = document.querySelector(".skill-item");
+  if(!item) return;
+  const gap = 13.6;
+  const shift = skillPage * skillsPerPage() * (item.offsetWidth + gap);
+  skillTrack.style.transform = `translateX(-${shift}px)`;
+  drawSkillDots();
+}
+skillNext.onclick = () => { skillPage = (skillPage + 1) % skillPages(); updateSkills(); };
+skillPrev.onclick = () => { skillPage = (skillPage - 1 + skillPages()) % skillPages(); updateSkills(); };
+setInterval(() => { skillPage = (skillPage + 1) % skillPages(); updateSkills(); }, 3300);
+
+/* Project carousel */
+const projectTrack = document.getElementById("projectTrack");
+const projectPrev = document.getElementById("projectPrev");
+const projectNext = document.getElementById("projectNext");
+const projectPrevSide = document.getElementById("projectPrevSide");
+const projectNextSide = document.getElementById("projectNextSide");
+const projectDots = document.getElementById("projectDots");
+let projectPage = 0;
+
+function cardsVisible(){
+  if(window.innerWidth < 760) return 1;
+  if(window.innerWidth < 1100) return 3;
+  return 7;
+}
+function projectPages(){
+  return Math.ceil(document.querySelectorAll(".project-card").length / cardsVisible());
+}
+function drawProjectDots(){
+  projectDots.innerHTML = "";
+  for(let i=0;i<projectPages();i++){
+    const dot = document.createElement("span");
+    dot.className = i === projectPage ? "active" : "";
+    dot.onclick = () => { projectPage = i; updateProjects(); };
+    projectDots.appendChild(dot);
+  }
+}
+function updateProjects(){
+  const card = document.querySelector(".project-card");
+  if(!card) return;
+  const shift = projectPage * cardsVisible() * (card.offsetWidth + 16);
+  projectTrack.style.transform = `translateX(-${shift}px)`;
+  drawProjectDots();
+}
+function nextProject(){ projectPage = (projectPage + 1) % projectPages(); updateProjects(); }
+function prevProject(){ projectPage = (projectPage - 1 + projectPages()) % projectPages(); updateProjects(); }
+projectNext.onclick = nextProject;
+projectNextSide.onclick = nextProject;
+projectPrev.onclick = prevProject;
+projectPrevSide.onclick = prevProject;
+setInterval(nextProject, 5400);
+
+window.addEventListener("resize", () => {
+  skillPage = 0;
+  projectPage = 0;
+  updateSkills();
+  updateProjects();
+});
+
+updateActiveNav();
+updateSkills();
+updateProjects();
