@@ -2,24 +2,9 @@
 
 Static GitHub Pages portfolio.
 
-## Upload
-Upload all files in this folder to your GitHub Pages repository root:
-
-- index.html
-- styles.css
-- script.js
-- assets/
-
-## Profile photo
-Add your photo here:
-
-`assets/images/profile.jpg`
-
-Recommended: square image, 800x800px or larger.
-
-## CV
-Replace:
-
-`assets/docs/Kaushik_Somashekar_CV.pdf`
-
-with your actual CV file using the same filename.
+## Upload instructions
+1. Extract this ZIP.
+2. Upload `index.html`, `styles.css`, `script.js`, and the `assets` folder to the root of your GitHub Pages repository.
+3. Add your profile image as `assets/images/profile.jpg`.
+4. Add your CV as `assets/docs/Kaushik_Somashekar_CV.pdf`.
+5. Commit and refresh GitHub Pages.

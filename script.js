@@ -1,75 +1,15 @@
-const toggle = document.querySelector('.mobile-toggle');
-const nav = document.querySelector('.nav');
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-  });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
-}
-
-const carouselState = { skills: 0, projects: 0 };
-const carouselMap = { skills: '#skillsCarousel .track', projects: '#projectsCarousel .track' };
-function moveCarousel(name, direction) {
-  const track = document.querySelector(carouselMap[name]);
-  if (!track) return;
-  const viewport = track.parentElement;
-  const first = track.children[0];
-  if (!first) return;
-  const gap = 18;
-  const step = first.getBoundingClientRect().width + gap;
-  const max = Math.max(0, track.scrollWidth - viewport.clientWidth);
-  carouselState[name] = Math.min(max, Math.max(0, carouselState[name] + (direction === 'right' ? step : -step)));
-  track.style.transform = `translateX(-${carouselState[name]}px)`;
-}
-document.querySelectorAll('[data-carousel]').forEach(btn => {
-  btn.addEventListener('click', () => moveCarousel(btn.dataset.carousel, btn.dataset.direction));
-});
-
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav a');
-function updateActiveNav(){
-  let current = 'home';
-  sections.forEach(section => { if (window.scrollY >= section.offsetTop - 140) current = section.id; });
-  navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
-}
-window.addEventListener('scroll', updateActiveNav);
-updateActiveNav();
-
-const chatbotButton = document.querySelector('.chatbot-button');
-const chatbot = document.querySelector('.chatbot');
-const chatbotClose = document.querySelector('.chatbot-close');
-const chatbotForm = document.querySelector('.chatbot-form');
-const chatbotInput = document.querySelector('.chatbot-input');
-const chatbotMessages = document.querySelector('.chatbot-messages');
-
-const profileAnswers = [
-  { keys:['experience','years'], text:'Kaushik has 5+ years of experience across Retail, Ecommerce, Marketing Analytics and Data Science.' },
-  { keys:['skills','tools','stack'], text:'Core stack includes GA4, Adobe Analytics, Adobe CJA, GTM, Tealium, Firebase, SQL, Python, DBT, BigQuery, Snowflake, GCP, Tableau, Power BI, Looker and AI/ML.' },
-  { keys:['projects','project'], text:'Featured projects include Customer Segmentation, Marketing Mix Modelling, Product Recommendation Engine, Propensity Model, GA4 Funnel Analysis, A/B Testing Framework, CLV Prediction and Marketing Attribution.' },
-  { keys:['contact','email','phone','linkedin'], text:'You can contact Kaushik at kaushiksreddy1@gmail.com, LinkedIn: linkedin/kaushik-somashekar, or phone: +447436876417.' },
-  { keys:['education','university','degree'], text:'Education: MSc Data Science from the University of the West of England.' },
-  { keys:['impact','revenue','business'], text:'Business impact includes £10M+ revenue impact, 20+ dashboards built, 50+ tracking implementations, 15% campaign uplift and 12% marketing ROI improvement.' }
-];
-function addMessage(text, type){
-  if(!chatbotMessages) return;
-  const div = document.createElement('div');
-  div.className = `message ${type}`;
-  div.textContent = text;
-  chatbotMessages.appendChild(div);
-  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-}
-if(chatbotButton && chatbot){ chatbotButton.addEventListener('click', () => chatbot.classList.toggle('open')); }
-if(chatbotClose && chatbot){ chatbotClose.addEventListener('click', () => chatbot.classList.remove('open')); }
-if(chatbotForm && chatbotInput){
-  chatbotForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const question = chatbotInput.value.trim();
-    if(!question) return;
-    addMessage(question, 'user');
-    chatbotInput.value = '';
-    const q = question.toLowerCase();
-    const answer = profileAnswers.find(item => item.keys.some(k => q.includes(k)));
-    addMessage(answer ? answer.text : 'I can answer questions about Kaushik’s experience, skills, projects, education, impact and contact details.', 'bot');
-  });
-}
+const toggle=document.querySelector('.mobile-toggle');
+const nav=document.querySelector('.nav');
+if(toggle&&nav){toggle.addEventListener('click',()=>{nav.classList.toggle('open');toggle.setAttribute('aria-expanded',nav.classList.contains('open'));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
+const carousels={skills:{el:document.querySelector('#skillsCarousel .track'),index:0,step:238},projects:{el:document.querySelector('#projectsCarousel .track'),index:0,step:383}};
+document.querySelectorAll('[data-carousel]').forEach(btn=>btn.addEventListener('click',()=>{const c=carousels[btn.dataset.carousel];if(!c||!c.el)return;const max=Math.max(0,c.el.children.length-3);c.index+=btn.dataset.direction==='right'?1:-1;c.index=Math.max(0,Math.min(c.index,max));c.el.style.transform=`translateX(${-c.index*c.step}px)`;}));
+const chatbotButton=document.querySelector('.chatbot-button');
+const chatbot=document.querySelector('.chatbot');
+const chatbotClose=document.querySelector('.chatbot-close');
+const form=document.querySelector('.chatbot-form');
+const input=document.querySelector('.chatbot-input');
+const messages=document.querySelector('.chatbot-messages');
+const knowledge={skills:'Kaushik works across GA4, Adobe Analytics, Adobe CJA, GTM, Tealium, Firebase, SQL, Python, DBT, BigQuery, Snowflake, GCP, Tableau, Power BI, Looker, attribution, MMM, A/B testing and machine learning.',experience:'Kaushik has experience across Sainsbury’s UK, University of the West of England, Icon Hotels and Bosch, covering retail, ecommerce, hospitality, research analytics and BI.',education:'Kaushik holds an MSc Data Science from University of Westminster.',projects:'Featured projects include customer segmentation, marketing mix modelling, product recommendation engine, propensity model, customer journey analytics, GA4 funnel analysis, A/B testing framework, dashboards, CLV prediction, churn prediction and attribution modelling.',impact:'Kaushik has 5+ years of experience and £10M+ revenue impact through analytics, experimentation and growth strategy.',contact:'You can contact Kaushik at kaushiksreddy1@gmail.com or through LinkedIn.'};
+function addMessage(text,type){const div=document.createElement('div');div.className=`message ${type}`;div.textContent=text;messages.appendChild(div);messages.scrollTop=messages.scrollHeight;}
+function answer(q){q=q.toLowerCase();if(q.includes('skill')||q.includes('tool')||q.includes('stack'))return knowledge.skills;if(q.includes('experience')||q.includes('work')||q.includes('company'))return knowledge.experience;if(q.includes('education')||q.includes('degree')||q.includes('msc')||q.includes('university'))return knowledge.education;if(q.includes('project'))return knowledge.projects;if(q.includes('impact')||q.includes('revenue')||q.includes('business'))return knowledge.impact;if(q.includes('contact')||q.includes('email')||q.includes('linkedin')||q.includes('phone'))return knowledge.contact;return 'Kaushik is a Digital Analyst, Product Analyst and Marketing Data Analyst focused on customer behaviour, product intelligence, digital analytics, marketing analytics and AI/ML. Ask me about skills, projects, experience, education, impact or contact details.';}
+if(chatbotButton&&chatbot){chatbotButton.addEventListener('click',()=>chatbot.classList.toggle('open'));chatbotClose?.addEventListener('click',()=>chatbot.classList.remove('open'));form?.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;addMessage(q,'user');input.value='';setTimeout(()=>addMessage(answer(q),'bot'),250);});}

@@ -49,7 +49,7 @@
 
       <aside class="profile-panel reveal" aria-label="Profile summary">
         <div class="profile-image">
-          <img src="kaushik.jpg" alt="Kaushik Somashekar profile picture" onerror="this.style.display='none'; this.parentElement.classList.add('show-initials');" />
+          <img src="assets/images/profile.jpg" alt="Kaushik Somashekar profile picture" onerror="this.style.display='none'; this.parentElement.classList.add('show-initials');" />
           <span>KS</span>
         </div>
         <h2>Kaushik Somashekar</h2>
@@ -78,14 +78,14 @@
     </section>
 
     <section id="about" class="section about two-col">
-      <div class="reveal">
+      <div class="reveal about-copy">
         <h2 class="section-title">About Me</h2>
         <p>Analytics professional focused on helping businesses understand customers, improve digital journeys, optimise campaigns and build measurable growth strategies.</p>
         <p>I combine digital analytics, product intelligence, customer segmentation, experimentation, marketing attribution and AI/ML to turn raw data into commercially useful decisions.</p>
         <a class="btn outline small" href="#projects">View Analytics Work →</a>
       </div>
       <div class="about-cards reveal">
-        <article><span>🎓</span><h3>Education</h3><span> <h2>MSc Data Science</h2></span><p>University of Westminster</p></article>
+        <article class="education-card"><span>🎓</span><h3>Education</h3><strong>MSc Data Science</strong><p>University of Westminster</p></article>
         <article><span>📍</span><h3>Location</h3><p>London, UK</p></article>
         <article><span>🎯</span><h3>Focus</h3><p>Digital Analytics, Product Analytics, Customer Intelligence and AI/ML</p></article>
       </div>
@@ -106,26 +106,9 @@
         <article class="tech-group"><div class="tech-icon">☁️</div><h3>Data Platforms & AI/ML</h3><p>Data modelling, pipelines, machine learning and reporting infrastructure.</p><div class="tech-pills"><span>SQL</span><span>Python</span><span>DBT</span><span>BigQuery</span><span>Snowflake</span><span>GCP</span><span>ETL Pipelines</span><span>Machine Learning</span></div></article>
       </div>
 
-      <div class="carousel" id="skillsCarousel" style="margin-top:28px;">
+      <div class="carousel" id="skillsCarousel">
         <div class="track">
-          <article class="skill-card">AI & ML<span>Predictive models</span></article>
-          <article class="skill-card">GA4<span>Digital analytics</span></article>
-          <article class="skill-card">Adobe Analytics<span>Customer insights</span></article>
-          <article class="skill-card">Adobe CJA<span>Journey analytics</span></article>
-          <article class="skill-card">SQL<span>Data analysis</span></article>
-          <article class="skill-card">DBT<span>Data modelling</span></article>
-          <article class="skill-card">Python<span>Data science</span></article>
-          <article class="skill-card">Google Tag Manager<span>Tracking setup</span></article>
-          <article class="skill-card">Tealium<span>Tag management</span></article>
-          <article class="skill-card">Firebase<span>App analytics</span></article>
-          <article class="skill-card">Tableau<span>BI dashboards</span></article>
-          <article class="skill-card">Power BI<span>Reporting</span></article>
-          <article class="skill-card">Looker<span>Semantic BI</span></article>
-          <article class="skill-card">Looker Studio<span>Dashboards</span></article>
-          <article class="skill-card">GCP<span>Cloud analytics</span></article>
-          <article class="skill-card">Snowflake<span>Warehouse</span></article>
-          <article class="skill-card">BigQuery<span>Cloud data</span></article>
-          <article class="skill-card">ETL Pipelines<span>Data workflows</span></article>
+          <article class="skill-card">AI & ML<span>Predictive models</span></article><article class="skill-card">GA4<span>Digital analytics</span></article><article class="skill-card">Adobe Analytics<span>Customer insights</span></article><article class="skill-card">Adobe CJA<span>Journey analytics</span></article><article class="skill-card">SQL<span>Data analysis</span></article><article class="skill-card">DBT<span>Data modelling</span></article><article class="skill-card">Python<span>Data science</span></article><article class="skill-card">Google Tag Manager<span>Tracking setup</span></article><article class="skill-card">Tealium<span>Tag management</span></article><article class="skill-card">Firebase<span>App analytics</span></article><article class="skill-card">Tableau<span>BI dashboards</span></article><article class="skill-card">Power BI<span>Reporting</span></article><article class="skill-card">Looker<span>Semantic BI</span></article><article class="skill-card">Looker Studio<span>Dashboards</span></article><article class="skill-card">GCP<span>Cloud analytics</span></article><article class="skill-card">Snowflake<span>Warehouse</span></article><article class="skill-card">BigQuery<span>Cloud data</span></article><article class="skill-card">ETL Pipelines<span>Data workflows</span></article>
         </div>
       </div>
     </section>
@@ -147,10 +130,7 @@
 
     <section id="projects" class="section carousel-section reveal">
       <div class="section-head">
-        <div>
-          <span class="eyebrow">Featured Projects</span>
-          <h2 class="section-title">Data-driven solutions to real business problems</h2>
-        </div>
+        <div><span class="eyebrow">Featured Projects</span><h2 class="section-title">Data-driven solutions to real business problems</h2></div>
         <div class="arrows"><button data-carousel="projects" data-direction="left" aria-label="Previous projects">‹</button><button data-carousel="projects" data-direction="right" aria-label="Next projects">›</button></div>
       </div>
       <div class="carousel projects-carousel" id="projectsCarousel">
@@ -173,10 +153,10 @@
     <section id="certifications" class="section reveal">
       <h2 class="section-title">Certifications</h2>
       <div class="cert-grid">
-        <article><div class="cert-logo">GA</div><div><h3>Google Analytics Certification</h3><p>Google Analytics / GA4</p></div></article>
-        <article><div class="cert-logo">AA</div><div><h3>Adobe Analytics / CJA</h3><p>Adobe Experience Cloud</p></div></article>
-        <article><div class="cert-logo">BI</div><div><h3>Power BI / Tableau Dashboards</h3><p>Business Intelligence</p></div></article>
-        <article><div class="cert-logo">DS</div><div><h3>SQL, Python and Data Science</h3><p>Analytics & Machine Learning</p></div></article>
+        <article><div class="cert-logo google">G</div><div><h3>Google Analytics Certification</h3><p>Google Analytics / GA4</p></div></article>
+        <article><div class="cert-logo adobe">A</div><div><h3>Adobe Analytics / CJA</h3><p>Adobe Experience Cloud</p></div></article>
+        <article><div class="cert-logo microsoft">M</div><div><h3>Power BI / Tableau Dashboards</h3><p>Business Intelligence</p></div></article>
+        <article><div class="cert-logo data">DS</div><div><h3>SQL, Python and Data Science</h3><p>Analytics & Machine Learning</p></div></article>
       </div>
     </section>
 
@@ -189,7 +169,6 @@
         <a href="tel:+447436876417"><span class="contact-icon-small">☎</span>+447436876417</a>
       </div>
     </section>
-
   </main>
 
   <footer>© 2026 Kaushik Somashekar. Built for GitHub Pages.</footer>
@@ -203,4 +182,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-Need create css complete. Previous ended truncated due output. Let's write. Need ensure no external file mismatch. Also CV placeholder. JS. Zip. maybe validate with grep. Then answer concise link. Could mention I rebuilt after inspecting. Need maybe include apology but not too much. Use file citation? If referring to uploaded styles, cite. But final can just link. Need no file_search citation? Since used earlier style from uploaded file? We should cite if mention. But low oververbosity. Use sandbox link. Let's write CSS. Ensure .reveal hidden issue if JS doesn't run: add JS. If JS not loaded, reveal hidden? We can make reveal visible by default? Better: .reveal visible default? Actually to avoid blank: .reveal{opacity:1; transform:none} and JS can add class? no need. Use animation not hide. This prevents content blank if script fails. Good. Navigation not blue default. Also if CSS not loaded issue would still default. But zip correct. Need maybe include README. Need maybe test local parse. Use maybe Python extract verify. Need also placeholder PDF. Use cp maybe. Need profile placeholder? If absent img fallback onerror works. But on GitHub 404 triggers. okay. Ensure profile span hidden unless class. CSS. Let's do. 2026 date. Need 
