@@ -16,3 +16,166 @@
 @media(max-width:1200px){.hero,.two-col,.experience-wrap{grid-template-columns:1fr}.hero{gap:52px;min-height:auto}.profile-panel{justify-self:start;max-width:100%}.impact-strip{grid-template-columns:repeat(3,1fr)}.cert-grid,.tech-dynamic{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:980px){.site-header{height:72px}.nav{position:fixed;top:72px;left:0;right:0;background:#070b15;display:none;flex-direction:column;padding:24px}.nav.open{display:flex}.mobile-toggle{display:block}.about-cards{grid-template-columns:1fr}.timeline article{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.profile-image{width:220px;height:220px}}
 @media(max-width:650px){.site-header{padding:0 20px}.brand span:last-child{display:none}.section{padding:58px 18px}.hero h1{font-size:42px;letter-spacing:-.04em}.hero-text{font-size:17px;line-height:1.65}.hero-actions{flex-direction:column}.btn{width:100%}.profile-panel{padding:30px 22px;min-height:auto}.profile-image{width:170px;height:170px}.profile-skills{grid-template-columns:repeat(2,1fr)}.impact-strip,.cert-grid,.tech-dynamic{grid-template-columns:1fr}.section-title{font-size:34px}.skill-card{min-width:175px}.projects-carousel .project-card{min-width:285px}.contact{width:calc(100% - 36px);padding:34px 18px}.timeline{padding-left:28px}.timeline article:before{left:-38px}.chatbot-button{right:18px}.chatbot{right:16px;bottom:146px}}
+
+
+/* =========================================================
+   FINAL REQUESTED UPDATES - PROFILE CARD + EDUCATION CARD
+   Keeps existing homepage layout; only improves right profile
+   card sizing and education card styling.
+   ========================================================= */
+
+/* 1) Make right-side profile card bigger and more premium */
+.profile-panel{
+  max-width:920px !important;
+  min-height:720px !important;
+  padding:62px 54px !important;
+  border-radius:36px !important;
+  background:
+    radial-gradient(circle at 50% 4%, rgba(0,245,225,.13), transparent 34%),
+    radial-gradient(circle at 75% 28%, rgba(139,92,246,.20), transparent 42%),
+    linear-gradient(145deg,rgba(16,24,39,.92),rgba(5,11,23,.82)) !important;
+  box-shadow:
+    0 0 95px rgba(139,92,246,.28),
+    0 32px 90px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.07) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+}
+
+.profile-image{
+  width:360px !important;
+  height:360px !important;
+  margin-bottom:32px !important;
+}
+
+.profile-image span{
+  font-size:82px !important;
+}
+
+.profile-panel h2{
+  font-size:42px !important;
+  line-height:1.05 !important;
+  margin-bottom:14px !important;
+}
+
+.profile-panel p{
+  font-size:18px !important;
+  line-height:1.5 !important;
+}
+
+.profile-skills{
+  gap:16px !important;
+  padding-top:32px !important;
+}
+
+.profile-skills span{
+  padding:15px 16px !important;
+  font-size:15px !important;
+  border-radius:14px !important;
+}
+
+/* 2) Education card: no green/cyan text, centered icon, better font */
+.about-cards article{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-items:center !important;
+  min-height:210px !important;
+}
+
+.about-cards article > span,
+.about-cards .card-icon{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  width:56px !important;
+  height:56px !important;
+  margin:0 auto 18px !important;
+  font-size:34px !important;
+  line-height:1 !important;
+  text-align:center !important;
+}
+
+.education-card h3{
+  font-size:21px !important;
+  font-weight:900 !important;
+  margin:0 0 12px !important;
+  color:#f4f7fb !important;
+}
+
+.education-card strong,
+.education-card .education-degree{
+  display:block !important;
+  color:#f4f7fb !important;
+  font-size:20px !important;
+  line-height:1.25 !important;
+  font-weight:900 !important;
+  margin:0 0 9px !important;
+  letter-spacing:-.01em !important;
+}
+
+.education-card p{
+  color:#a7b3c7 !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  line-height:1.45 !important;
+  margin:0 !important;
+}
+
+/* 3) Keep left side stable; give right card enough room on desktop */
+@media(min-width:1500px){
+  .hero{
+    grid-template-columns:minmax(0,1.08fr) minmax(760px,.96fr) !important;
+    gap:58px !important;
+  }
+
+  .profile-panel{
+    max-width:960px !important;
+    min-height:740px !important;
+  }
+
+  .profile-image{
+    width:380px !important;
+    height:380px !important;
+  }
+}
+
+@media(min-width:1900px){
+  .hero{
+    grid-template-columns:minmax(0,1.06fr) minmax(820px,1fr) !important;
+    gap:64px !important;
+  }
+
+  .profile-panel{
+    max-width:1000px !important;
+    min-height:760px !important;
+  }
+}
+
+@media(max-width:1200px){
+  .profile-panel{
+    max-width:100% !important;
+    min-height:auto !important;
+  }
+}
+
+@media(max-width:650px){
+  .profile-panel{
+    padding:32px 22px !important;
+    min-height:auto !important;
+  }
+
+  .profile-image{
+    width:180px !important;
+    height:180px !important;
+  }
+
+  .profile-panel h2{
+    font-size:28px !important;
+  }
+
+  .about-cards article{
+    min-height:190px !important;
+  }
+}
