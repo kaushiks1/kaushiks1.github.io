@@ -1,23 +1,25 @@
 # Kaushik Somashekar Portfolio
 
-Static GitHub Pages portfolio package.
+Static GitHub Pages portfolio.
 
 ## Upload
-Upload these files/folders to the root of your GitHub Pages repository:
+Upload all files in this folder to your GitHub Pages repository root:
 
 - index.html
 - styles.css
 - script.js
 - assets/
 
-## Add profile picture
-Place your image here:
+## Profile photo
+Add your photo here:
 
-assets/images/profile.jpg
+`assets/images/profile.jpg`
 
-Keep the filename exactly `profile.jpg`.
+Recommended: square image, 800x800px or larger.
 
-## Add CV
-Replace this placeholder file:
+## CV
+Replace:
 
-assets/docs/Kaushik_Somashekar_CV.pdf
+`assets/docs/Kaushik_Somashekar_CV.pdf`
+
+with your actual CV file using the same filename.

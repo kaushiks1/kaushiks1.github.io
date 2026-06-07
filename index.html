@@ -49,7 +49,7 @@
 
       <aside class="profile-panel reveal" aria-label="Profile summary">
         <div class="profile-image">
-          <img src="kaushik.jpg" alt="Kaushik Somashekar profile picture" onerror="this.style.display='none'; this.parentElement.classList.add('show-initials');" />
+          <img src="assets/images/profile.jpg" alt="Kaushik Somashekar profile picture" onerror="this.style.display='none'; this.parentElement.classList.add('show-initials');" />
           <span>KS</span>
         </div>
         <h2>Kaushik Somashekar</h2>
@@ -61,13 +61,20 @@
       </aside>
     </section>
 
-    <section id="impact" class="section impact-strip reveal" aria-label="Impact metrics">
-      <article><span>£10M+</span><p>Revenue Impact</p></article>
-      <article><span>5+</span><p>Years Experience</p></article>
-      <article><span>20+</span><p>Dashboards Built</p></article>
-      <article><span>50+</span><p>Tracking Implementations</p></article>
-      <article><span>15%</span><p>Campaign Uplift</p></article>
-      <article><span>12%</span><p>Marketing ROI Improvement</p></article>
+    <section id="impact" class="section reveal" aria-label="Impact metrics">
+      <div class="impact-intro">
+        <span class="eyebrow">Business Impact</span>
+        <h2 class="impact-title">Outcomes I delivered across analytics, experimentation and growth strategy.</h2>
+        <p class="impact-subtitle">A snapshot of measurable value created through customer intelligence, marketing optimisation, product analytics and data-driven decision making.</p>
+      </div>
+      <div class="impact-strip">
+        <article><span>£10M+</span><p>Revenue Impact</p></article>
+        <article><span>5+</span><p>Years Experience</p></article>
+        <article><span>20+</span><p>Dashboards Built</p></article>
+        <article><span>50+</span><p>Tracking Implementations</p></article>
+        <article><span>15%</span><p>Campaign Uplift</p></article>
+        <article><span>12%</span><p>Marketing ROI Improvement</p></article>
+      </div>
     </section>
 
     <section id="about" class="section about two-col">
@@ -78,7 +85,7 @@
         <a class="btn outline small" href="#projects">View Analytics Work →</a>
       </div>
       <div class="about-cards reveal">
-        <article><span>🎓</span><h3>Education</h3><p>University of the West of England</p></article>
+        <article><span>🎓</span><h3>Education</h3><p>University of the West of England <strong class="education-degree">MSc Data Science</strong></p></article>
         <article><span>📍</span><h3>Location</h3><p>London, UK</p></article>
         <article><span>🎯</span><h3>Focus</h3><p>Digital Analytics, Product Analytics, Customer Intelligence and AI/ML</p></article>
       </div>
@@ -88,11 +95,18 @@
       <div class="section-head">
         <div>
           <h2 class="section-title">Analytics & Technology Stack</h2>
-          <p>Tools and platforms used to deliver measurement, insight, reporting and growth.</p>
+          <p>A practical skill map across digital measurement, product analytics, cloud data platforms, experimentation and AI/ML.</p>
         </div>
         <div class="arrows"><button data-carousel="skills" data-direction="left" aria-label="Previous skills">‹</button><button data-carousel="skills" data-direction="right" aria-label="Next skills">›</button></div>
       </div>
-      <div class="carousel" id="skillsCarousel">
+
+      <div class="tech-dynamic">
+        <article class="tech-group"><div class="tech-icon">📊</div><h3>Digital Analytics & Measurement</h3><p>Tracking, journey analytics and customer behaviour measurement.</p><div class="tech-pills"><span>GA4</span><span>Adobe Analytics</span><span>Adobe CJA</span><span>GTM</span><span>Tealium</span><span>Firebase</span></div></article>
+        <article class="tech-group"><div class="tech-icon">🧠</div><h3>Product Intelligence & Experimentation</h3><p>Insight frameworks for product growth and conversion optimisation.</p><div class="tech-pills"><span>Product Analytics</span><span>A/B Testing</span><span>Attribution</span><span>MMM</span><span>Customer Analytics</span></div></article>
+        <article class="tech-group"><div class="tech-icon">☁️</div><h3>Data Platforms & AI/ML</h3><p>Data modelling, pipelines, machine learning and reporting infrastructure.</p><div class="tech-pills"><span>SQL</span><span>Python</span><span>DBT</span><span>BigQuery</span><span>Snowflake</span><span>GCP</span><span>ETL Pipelines</span><span>Machine Learning</span></div></article>
+      </div>
+
+      <div class="carousel" id="skillsCarousel" style="margin-top:28px;">
         <div class="track">
           <article class="skill-card">AI & ML<span>Predictive models</span></article>
           <article class="skill-card">GA4<span>Digital analytics</span></article>
@@ -112,19 +126,22 @@
           <article class="skill-card">Snowflake<span>Warehouse</span></article>
           <article class="skill-card">BigQuery<span>Cloud data</span></article>
           <article class="skill-card">ETL Pipelines<span>Data workflows</span></article>
-          <article class="skill-card">MMM<span>Media modelling</span></article>
-          <article class="skill-card">A/B Testing<span>Experimentation</span></article>
         </div>
       </div>
     </section>
 
     <section id="experience" class="section reveal">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <article><time>Retail & Ecommerce</time><div><h3>Sainsbury's UK</h3><p>Digital, product and marketing analytics across customer behaviour, campaign performance and growth optimisation.</p></div></article>
-        <article><time>Analytics & Research</time><div><h3>University of the West of England</h3><p>Data analysis, reporting, insight development and analytical problem solving.</p></div></article>
-        <article><time>Hospitality Analytics</time><div><h3>Icon Hotels</h3><p>Customer, revenue and marketing performance insights for hospitality growth.</p></div></article>
-        <article><time>Data & Business Analytics</time><div><h3>Bosch</h3><p>Business intelligence, reporting automation and data-driven process improvement.</p></div></article>
+      <div class="experience-wrap">
+        <div class="experience-copy">
+          <h2 class="section-title">Experience</h2>
+          <p>Professional experience across retail, ecommerce, hospitality, analytics research and business intelligence — focused on practical commercial outcomes.</p>
+        </div>
+        <div class="timeline">
+          <article><time>Retail & Ecommerce</time><div><h3>Sainsbury's UK</h3><p>Digital, product and marketing analytics across customer behaviour, campaign performance and growth optimisation.</p></div></article>
+          <article><time>Analytics & Research</time><div><h3>University of the West of England</h3><p>Data analysis, reporting, insight development and analytical problem solving.</p></div></article>
+          <article><time>Hospitality Analytics</time><div><h3>Icon Hotels</h3><p>Customer, revenue and marketing performance insights for hospitality growth.</p></div></article>
+          <article><time>Data & Business Analytics</time><div><h3>Bosch</h3><p>Business intelligence, reporting automation and data-driven process improvement.</p></div></article>
+        </div>
       </div>
     </section>
 
@@ -156,10 +173,10 @@
     <section id="certifications" class="section reveal">
       <h2 class="section-title">Certifications</h2>
       <div class="cert-grid">
-        <article>Google Analytics Certification</article>
-        <article>Adobe Analytics / Customer Journey Analytics</article>
-        <article>Power BI / Tableau Dashboards</article>
-        <article>SQL, Python and Data Science</article>
+        <article><div class="cert-logo">GA</div><div><h3>Google Analytics Certification</h3><p>Google Analytics / GA4</p></div></article>
+        <article><div class="cert-logo">AA</div><div><h3>Adobe Analytics / CJA</h3><p>Adobe Experience Cloud</p></div></article>
+        <article><div class="cert-logo">BI</div><div><h3>Power BI / Tableau Dashboards</h3><p>Business Intelligence</p></div></article>
+        <article><div class="cert-logo">DS</div><div><h3>SQL, Python and Data Science</h3><p>Analytics & Machine Learning</p></div></article>
       </div>
     </section>
 
@@ -167,15 +184,23 @@
       <h2 class="section-title">Let's Connect</h2>
       <p>I’m open to analytics, product intelligence, marketing analytics and AI/ML opportunities.</p>
       <div class="contact-grid">
-        <a href="mailto:kaushiksreddy@gmail.com">kaushiksreddy@gmail.com</a>
-        <a href="https://www.linkedin.com/in/kaushik-somashekar/" target="_blank" rel="noopener">linkedin/kaushik-somashekar</a>
-        <span>+447436876417</span>
+        <a href="mailto:kaushiksreddy1@gmail.com"><span class="contact-icon-small">✉</span>kaushiksreddy1@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kaushik-somashekar" target="_blank" rel="noopener"><span class="contact-icon-small">in</span>linkedin/kaushik-somashekar</a>
+        <a href="tel:+447436876417"><span class="contact-icon-small">☎</span>+447436876417</a>
       </div>
     </section>
+
   </main>
 
-  <footer>© 2026 Kaushik Somashekar. All rights reserved.</footer>
+  <footer>© 2026 Kaushik Somashekar. Built for GitHub Pages.</footer>
+  <button class="chatbot-button" aria-label="Open profile chatbot">💬</button>
+  <div class="chatbot" aria-label="Kaushik profile chatbot">
+    <div class="chatbot-head"><div><strong>Ask about Kaushik</strong><span>Free profile Q&A assistant</span></div><button class="chatbot-close" aria-label="Close chatbot">×</button></div>
+    <div class="chatbot-messages"><div class="message bot">Hi! Ask me about Kaushik’s skills, experience, projects, education, impact or contact details.</div></div>
+    <form class="chatbot-form"><input class="chatbot-input" type="text" placeholder="Ask about Kaushik’s profile..." aria-label="Ask a question" /><button type="submit">Send</button></form>
+  </div>
   <a class="to-top" href="#home" aria-label="Back to top">↑</a>
   <script src="script.js"></script>
 </body>
 </html>
+Need create css complete. Previous ended truncated due output. Let's write. Need ensure no external file mismatch. Also CV placeholder. JS. Zip. maybe validate with grep. Then answer concise link. Could mention I rebuilt after inspecting. Need maybe include apology but not too much. Use file citation? If referring to uploaded styles, cite. But final can just link. Need no file_search citation? Since used earlier style from uploaded file? We should cite if mention. But low oververbosity. Use sandbox link. Let's write CSS. Ensure .reveal hidden issue if JS doesn't run: add JS. If JS not loaded, reveal hidden? We can make reveal visible by default? Better: .reveal visible default? Actually to avoid blank: .reveal{opacity:1; transform:none} and JS can add class? no need. Use animation not hide. This prevents content blank if script fails. Good. Navigation not blue default. Also if CSS not loaded issue would still default. But zip correct. Need maybe include README. Need maybe test local parse. Use maybe Python extract verify. Need also placeholder PDF. Use cp maybe. Need profile placeholder? If absent img fallback onerror works. But on GitHub 404 triggers. okay. Ensure profile span hidden unless class. CSS. Let's do. 2026 date. Need 
