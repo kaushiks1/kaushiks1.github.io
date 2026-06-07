@@ -43,3 +43,161 @@ body{
 @media(max-width:1200px){.hero,.two-col,.experience-wrap{grid-template-columns:1fr}.hero{gap:52px;min-height:auto}.profile-panel{justify-self:start;max-width:100%}.impact-strip{grid-template-columns:repeat(3,1fr)}.cert-grid,.tech-dynamic{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:980px){.site-header{height:72px}.nav{position:fixed;top:72px;left:0;right:0;background:#070b15;display:none;flex-direction:column;padding:24px}.nav.open{display:flex}.mobile-toggle{display:block}.about-cards{grid-template-columns:1fr}.timeline article{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.profile-image{width:220px;height:220px}}
 @media(max-width:650px){.site-header{padding:0 20px}.brand span:last-child{display:none}.section{padding:58px 18px}.hero h1{font-size:42px;letter-spacing:-.04em}.hero-text{font-size:17px}.hero-actions{flex-direction:column}.btn{width:100%}.profile-panel{padding:30px 22px}.profile-image{width:170px;height:170px}.profile-skills{grid-template-columns:repeat(2,1fr)}.impact-strip,.cert-grid,.tech-dynamic{grid-template-columns:1fr}.section-title{font-size:34px}.skill-card{min-width:175px}.projects-carousel .project-card{min-width:285px}.contact{width:calc(100% - 36px);padding:34px 18px}.timeline{padding-left:28px}.timeline article:before{left:-38px}.chatbot-button{right:18px}.chatbot{right:16px;bottom:146px}}
+
+/* =========================================================
+   PROFESSIONAL HERO SPACING UPDATE
+   Purpose: keep existing Kaushik design/content intact,
+   reduce empty space above/below hero, and make spacing
+   closer to the Pallavi-style reference layout.
+   ========================================================= */
+
+/* Compact hero section without changing design */
+.section.hero,
+.hero.section,
+section.hero {
+  min-height: 74vh !important;
+  padding-top: 64px !important;
+  padding-bottom: 30px !important;
+}
+
+/* Pull left copy and right card closer together */
+.hero {
+  min-height: 74vh !important;
+  grid-template-columns: minmax(0, 1.22fr) minmax(430px, .78fr) !important;
+  gap: 32px !important;
+  align-items: start !important;
+}
+
+/* Move the left content slightly down, but not too much */
+.hero-copy {
+  padding-top: 72px !important;
+}
+
+/* Move profile card up and remove floating empty area */
+.profile-panel {
+  align-self: start !important;
+  margin-top: 34px !important;
+  transform: none !important;
+}
+
+/* Reduce heading and paragraph vertical spacing */
+.hero h1 {
+  margin-bottom: 20px !important;
+}
+
+.hero-text {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.hero-actions {
+  margin-top: 26px !important;
+  margin-bottom: 18px !important;
+}
+
+.hero-note {
+  margin-top: 10px !important;
+}
+
+/* Bring impact section/cards closer to hero */
+#impact,
+.impact-section {
+  padding-top: 34px !important;
+}
+
+.impact-intro {
+  padding-bottom: 18px !important;
+}
+
+.impact-strip {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Better desktop hero balance */
+@media (min-width: 1400px) {
+  .section.hero,
+  .hero.section,
+  section.hero {
+    min-height: 72vh !important;
+    padding-top: 58px !important;
+    padding-bottom: 26px !important;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.24fr) minmax(430px, .76fr) !important;
+    gap: 34px !important;
+  }
+
+  .hero-copy {
+    padding-top: 74px !important;
+  }
+
+  .profile-panel {
+    margin-top: 32px !important;
+  }
+}
+
+/* Very large screens: prevent unnecessary vertical emptiness */
+@media (min-width: 1700px) {
+  .hero {
+    min-height: 70vh !important;
+    gap: 36px !important;
+  }
+
+  .hero-copy {
+    padding-top: 78px !important;
+  }
+
+  .profile-panel {
+    margin-top: 34px !important;
+  }
+}
+
+/* Tablet: stack cleanly */
+@media (max-width: 1200px) {
+  .section.hero,
+  .hero.section,
+  section.hero {
+    min-height: auto !important;
+    padding-top: 58px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+    min-height: auto !important;
+  }
+
+  .hero-copy {
+    padding-top: 0 !important;
+  }
+
+  .profile-panel {
+    margin-top: 0 !important;
+  }
+}
+
+/* Mobile spacing */
+@media (max-width: 650px) {
+  .section.hero,
+  .hero.section,
+  section.hero {
+    padding-top: 46px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .hero {
+    gap: 28px !important;
+  }
+
+  .hero-actions {
+    margin-top: 22px !important;
+  }
+
+  #impact,
+  .impact-section {
+    padding-top: 28px !important;
+  }
+}
