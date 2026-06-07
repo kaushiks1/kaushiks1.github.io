@@ -1,13 +1,32 @@
 # Kaushik Somashekar Portfolio
 
-GitHub Pages-ready personal portfolio.
+Premium analytics consultancy-style portfolio for Digital Analytics, Product Analytics, Marketing Analytics and AI/ML roles.
 
-## Upload steps
-1. Extract this ZIP.
-2. Upload `index.html`, `styles.css`, `script.js`, and the `assets` folder to your GitHub Pages repository.
-3. Commit changes.
-4. Open `https://kaushiks1.github.io/`.
+## Tech Stack
+- React
+- Vite
+- Framer Motion
+- SwiperJS
+- Lucide Icons
+- CSS custom styling inspired by dark futuristic design systems
 
-## Replace CV
-Put your resume PDF at:
-`assets/Kaushik-Somashekar-CV.pdf`
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Build
+```bash
+npm run build
+```
+
+## Deploy to GitHub Pages
+1. Upload these files to your GitHub repository.
+2. Run `npm install` and `npm run build` locally.
+3. Deploy the `dist` folder using GitHub Pages, or use a GitHub Action for Vite.
+
+## Customize
+- Replace `/Kaushik-Somashekar-CV.pdf` with your actual CV PDF in the `public` folder.
+- Update GitHub/contact links in `src/main.jsx`.
+- Add your real portrait by replacing the `KS` placeholder in the hero card with an image.
