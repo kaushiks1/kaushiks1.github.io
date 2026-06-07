@@ -1,27 +1,29 @@
 # Kaushik Somashekar Portfolio
 
-Premium React + Vite portfolio for Digital Analytics, Product Analytics, Marketing Analytics and AI/ML roles.
+A complete static GitHub Pages portfolio website. No build step required.
 
-## Tech Stack
-- React
-- Vite
-- Framer Motion
-- SwiperJS
-- Lucide React
-- Tailwind-inspired custom CSS
+## Upload to GitHub Pages
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+1. Extract this ZIP.
+2. Upload all files to your repository root, not inside another folder.
+3. Keep these files at the top level:
+   - `index.html`
+   - `styles.css`
+   - `script.js`
+   - `assets/`
+4. Go to GitHub repository Settings → Pages.
+5. Select Branch: `main` and Folder: `/root`.
+6. Save and wait 1–3 minutes.
+7. Open your GitHub Pages URL.
 
-## Build for GitHub Pages
-```bash
-npm run build
-```
+## Edit links
 
-Upload the repository to GitHub, then enable GitHub Pages from the repository settings. If deploying under `https://kaushiks1.github.io/`, keep `base: '/'` in `vite.config.js`. If deploying to a project repository, set the Vite base path to your repository name.
+In `index.html`, update:
+- GitHub profile link
+- LinkedIn link
+- Email address
+- CV PDF file inside `assets/`
 
-## Notes
-Replace `/public/Kaushik-Somashekar-CV.pdf` with your actual CV file to activate the Download Resume button.
+## CV
+
+Replace `assets/Kaushik_Somashekar_CV.pdf` with your actual CV using the same file name.
