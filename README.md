@@ -1,6 +1,15 @@
-# Kaushik Somashekar Portfolio - Final Premium Build
+# Kaushik Somashekar Final Human Portfolio
 
-This build is designed to match the approved screenshot layout as closely as possible.
+A professional Lovable-style portfolio with:
+- Dark teal theme
+- Hero + profile card
+- Skills carousel
+- Impact cards
+- About section
+- Expertise cards
+- Experience timeline
+- Project carousel
+- Contact card
 
 ## Upload to GitHub
 
@@ -13,16 +22,14 @@ script.js
 README.md
 ```
 
-Also keep/upload:
+Keep your profile photo named:
 
 ```text
 kaushik.jpg
 ```
 
-For the resume button, upload your resume PDF as:
+Upload resume as:
 
 ```text
 KAUSHIK_SOMASHEKAR_3026_1 2.pdf
 ```
-
-or edit the link in `index.html`.

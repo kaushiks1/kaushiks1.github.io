@@ -1,301 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaushik Somashekar | Digital Analytics Portfolio</title>
-  <meta name="description" content="Digital & Marketing Analytics, Product Analytics, AI/ML and Customer Intelligence portfolio of Kaushik Somashekar."/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Portfolio of Kaushik Somashekar — Digital Analytics, Product Analytics, Marketing Analytics, AI/ML and Customer Intelligence." />
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="bg-noise"></div>
-  <div class="progress" id="progress"></div>
+  <div class="page-progress" id="pageProgress"></div>
 
-  <header class="header" id="header">
-    <nav class="nav">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#home" class="brand">Kaushik<span>.S</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-list" id="navList">
+      <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#expertise" class="nav-link">Expertise</a></li>
-        <li><a href="#journey" class="nav-link">Experience</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <div class="nav-actions">
-        <a class="resume-btn" href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" target="_blank">Download Resume</a>
-        <button class="theme-btn" aria-label="Theme toggle">☼</button>
-      </div>
+      <a class="resume-link" href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" target="_blank">Download Resume</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="data-wave"></div>
+    <section class="hero section" id="home">
+      <div class="hero-pattern"></div>
 
-      <div class="hero-wrap">
-        <div class="hero-left reveal">
-          <p class="eyebrow">DIGITAL & MARKETING ANALYTICS • PRODUCT ANALYTICS • AI/ML • CUSTOMER INTELLIGENCE</p>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Digital Analytics • Product Analytics • AI/ML • Customer Intelligence</p>
 
           <h1>
             Turning Customer Behaviour,<br>
-            Product Intelligence and Digital Analytics<br>
+            Product Intelligence<br>
+            and Digital Analytics<br>
             into <span>Business Growth.</span>
           </h1>
 
           <p class="hero-text">
-            5+ years of driving data-driven decisions across Retail, Ecommerce, Education and Product-led businesses.
+            5+ years of experience across <strong>Retail, Ecommerce, Marketing Analytics</strong> and Data Science —
+            driving <strong>£10M+ revenue impact</strong> through data-driven insights, experimentation and intelligent strategies.
           </p>
 
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">View My Work <span>→</span></a>
-            <a href="#impact" class="btn btn-outline">See My Impact <span>▥</span></a>
-            <a href="#journey" class="journey-cta">
-              <span class="play">▶</span>
-              <span>Explore<br>My Journey</span>
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary">View My Work <span>→</span></a>
+            <a href="#impact" class="button button-outline">See My Impact</a>
+            <a href="#experience" class="journey-link">
+              <span>▷</span>
+              <b>Explore<br>My Journey</b>
             </a>
           </div>
         </div>
 
         <aside class="profile-card reveal delay-1">
-          <div class="profile-main">
-            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-photo" onerror="this.style.display='none';document.querySelector('.photo-fallback').style.display='grid';"/>
-            <div class="photo-fallback">KS</div>
+          <div class="profile-header">
+            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-photo" onerror="this.style.display='none';document.querySelector('.profile-fallback').style.display='grid';">
+            <div class="profile-fallback">KS</div>
 
             <h2>Kaushik Somashekar</h2>
-            <p>Digital Analyst <span>•</span> Product Analyst</p>
+            <p>Digital Analyst • Product Analyst</p>
             <p>Marketing Data Analyst</p>
             <p class="location">⌖ London, UK</p>
           </div>
 
-          <div class="divider"></div>
+          <div class="profile-divider"></div>
 
-          <div class="skills-shell">
-            <button class="skill-arrow" id="skillPrev">‹</button>
-            <div class="skills-window">
-              <h3>CORE SKILLS</h3>
-              <div class="skills-track" id="skillsTrack">
-                <div class="skill"><div class="icon orange">▮▮▮</div><small>GA4</small></div>
-                <div class="skill"><div class="icon purple">◉</div><small>Adobe<br>Analytics</small></div>
-                <div class="skill"><div class="icon teal">⌬</div><small>CJA</small></div>
-                <div class="skill"><div class="icon blue">◆</div><small>GTM</small></div>
-                <div class="skill"><div class="icon teal">▧</div><small>Tealium</small></div>
-                <div class="skill"><div class="icon cyan">❄</div><small>Snowflake</small></div>
-                <div class="skill"><div class="icon cyan">BQ</div><small>BigQuery</small></div>
-                <div class="skill"><div class="icon yellow">🐍</div><small>Python</small></div>
-                <div class="skill"><div class="icon cyan">SQL</div><small>SQL</small></div>
-                <div class="skill"><div class="icon blue">▥</div><small>Power BI</small></div>
-                <div class="skill"><div class="icon purple">◌</div><small>Tableau</small></div>
-                <div class="skill"><div class="icon teal">A/B</div><small>A/B<br>Testing</small></div>
-                <div class="skill"><div class="icon orange">◎</div><small>Attribution</small></div>
-                <div class="skill"><div class="icon cyan">AI</div><small>AI/ML</small></div>
-                <div class="skill"><div class="icon teal">↗</div><small>Product<br>Analytics</small></div>
+          <div class="skills-carousel">
+            <button class="skill-control" id="skillPrev" aria-label="Previous skills">‹</button>
+
+            <div class="skill-window">
+              <p class="skill-title">Core Skills</p>
+              <div class="skill-track" id="skillTrack">
+                <div class="skill-item"><span>GA4</span><small>GA4</small></div>
+                <div class="skill-item"><span>AA</span><small>Adobe<br>Analytics</small></div>
+                <div class="skill-item"><span>CJA</span><small>Adobe<br>CJA</small></div>
+                <div class="skill-item"><span>GTM</span><small>GTM</small></div>
+                <div class="skill-item"><span>SQL</span><small>SQL</small></div>
+                <div class="skill-item"><span>Py</span><small>Python</small></div>
+                <div class="skill-item"><span>❄</span><small>Snowflake</small></div>
+                <div class="skill-item"><span>BQ</span><small>BigQuery</small></div>
+                <div class="skill-item"><span>ML</span><small>Machine<br>Learning</small></div>
+                <div class="skill-item"><span>A/B</span><small>A/B<br>Testing</small></div>
+                <div class="skill-item"><span>MMM</span><small>MMM</small></div>
+                <div class="skill-item"><span>Attr</span><small>Attribution</small></div>
+                <div class="skill-item"><span>PA</span><small>Product<br>Analytics</small></div>
+                <div class="skill-item"><span>BI</span><small>Power BI</small></div>
+                <div class="skill-item"><span>Tab</span><small>Tableau</small></div>
               </div>
             </div>
-            <button class="skill-arrow" id="skillNext">›</button>
+
+            <button class="skill-control" id="skillNext" aria-label="Next skills">›</button>
           </div>
-          <div class="dots" id="skillDots"></div>
+
+          <div class="carousel-dots" id="skillDots"></div>
         </aside>
       </div>
-
-      <section class="metrics" id="impact">
-        <article class="metric reveal">
-          <div class="metric-icon">£</div>
-          <div><h3>£10M+</h3><p>Revenue Impact</p></div>
-        </article>
-        <article class="metric reveal delay-1">
-          <div class="metric-icon">♙</div>
-          <div><h3>5M+</h3><p>Monthly Sessions<br>Analysed</p></div>
-        </article>
-        <article class="metric reveal delay-2">
-          <div class="metric-icon">▧</div>
-          <div><h3>20+</h3><p>Dashboards<br>Built</p></div>
-        </article>
-        <article class="metric reveal">
-          <div class="metric-icon">&lt;/&gt;</div>
-          <div><h3>50+</h3><p>Tracking<br>Implementations</p></div>
-        </article>
-        <article class="metric reveal delay-1">
-          <div class="metric-icon">↗</div>
-          <div><h3>15%</h3><p>Campaign<br>Uplift</p></div>
-        </article>
-        <article class="metric reveal delay-2">
-          <div class="metric-icon">◎</div>
-          <div><h3>12%</h3><p>Marketing ROI<br>Improvement</p></div>
-        </article>
-      </section>
     </section>
 
-    <section class="projects" id="projects">
-      <div class="projects-header">
-        <div>
-          <p class="section-label">FEATURED PROJECTS</p>
-          <h2>Data-driven solutions to real business problems</h2>
-        </div>
-        <div class="project-actions">
-          <a href="https://github.com/kaushiks1?tab=repositories" class="view-all" target="_blank">▢ View All Projects</a>
-          <button class="circle-control" id="prevProject">‹</button>
-          <button class="circle-control" id="nextProject">›</button>
-        </div>
-      </div>
-
-      <button class="floating-arrow floating-left" id="prevSide">‹</button>
-      <button class="floating-arrow floating-right" id="nextSide">›</button>
-
-      <div class="project-window">
-        <div class="project-track" id="projectTrack">
-          <article class="project-card">
-            <div class="project-image seg"></div>
-            <span class="badge ml">MACHINE LEARNING</span>
-            <h3>Online Web Customer Segmentation (ML)</h3>
-            <div class="chips"><span>Python</span><span>Scikit-learn</span></div>
-            <a href="https://github.com/kaushiks1/Online_web_customer_segmentation_ML" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image mmm"></div>
-            <span class="badge marketing">MARKETING ANALYTICS</span>
-            <h3>Marketing Mix Modelling</h3>
-            <div class="chips"><span>Python</span><span>Statsmodels</span></div>
-            <a href="https://github.com/kaushiks1/Marketing-mix-modelling" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image rec"></div>
-            <span class="badge recommender">RECOMMENDATION SYSTEM</span>
-            <h3>Product Recommendation Engine</h3>
-            <div class="chips"><span>Python</span><span>Cosine Similarity</span></div>
-            <a href="https://github.com/kaushiks1/product_recommendation_engine" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image propensity"></div>
-            <span class="badge predictive">PREDICTIVE MODELLING</span>
-            <h3>Propensity to Purchase Model</h3>
-            <div class="chips"><span>Python</span><span>Random Forest</span></div>
-            <a href="https://github.com/kaushiks1/propensity_to_purchase_model" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image journey"></div>
-            <span class="badge customer">CUSTOMER ANALYTICS</span>
-            <h3>Customer Journey Path Analysis</h3>
-            <div class="chips"><span>SQL</span><span>BigQuery</span></div>
-            <a href="https://github.com/kaushiks1/customer_journey_path_analysis" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image funnel"></div>
-            <span class="badge web">WEB ANALYTICS</span>
-            <h3>GA4 Ecommerce Funnel Analysis</h3>
-            <div class="chips"><span>GA4</span><span>Looker Studio</span></div>
-            <a href="https://github.com/kaushiks1/ga4_ecommerce_funnel_analysis" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image ab"></div>
-            <span class="badge testing">EXPERIMENTATION</span>
-            <h3>Web A/B Testing Framework</h3>
-            <div class="chips"><span>Python</span><span>Stats</span></div>
-            <a href="https://github.com/kaushiks1/web_ab_testing_framework" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image dashboard"></div>
-            <span class="badge viz">DATA VISUALISATION</span>
-            <h3>Marketing Performance Dashboard</h3>
-            <div class="chips"><span>Power BI</span><span>SQL</span></div>
-            <a href="https://github.com/kaushiks1/campaign_performance_analytics_dashboard" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image clv"></div>
-            <span class="badge predictive">CUSTOMER INTELLIGENCE</span>
-            <h3>Customer Lifetime Value Prediction</h3>
-            <div class="chips"><span>Python</span><span>ML</span></div>
-            <a href="https://github.com/kaushiks1/customer_lifetime_value_prediction" target="_blank">View Project →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image churn"></div>
-            <span class="badge ml">MACHINE LEARNING</span>
-            <h3>Customer Churn Prediction</h3>
-            <div class="chips"><span>Python</span><span>Classification</span></div>
-            <a href="https://github.com/kaushiks1/customer_churn_prediction" target="_blank">View Project →</a>
-          </article>
-        </div>
-      </div>
-      <div class="project-dots" id="projectDots"></div>
-    </section>
-
-    <section class="content-section" id="journey">
-      <div class="section-wrap">
-        <p class="section-label">MY JOURNEY</p>
-        <h2>From Engineering to Data Science, Product Analytics and Digital Growth.</h2>
-        <div class="journey-grid">
-          <div class="timeline">
-            <article><span>2023 — Present</span><h3>Sainsbury's UK</h3><p>Digital Analytics, Product Analytics, AI & Machine Learning, Customer Intelligence, Experimentation, Attribution and Predictive Analytics.</p></article>
-            <article><span>2023</span><h3>UWE Bristol</h3><p>GA4 implementation, campaign measurement, attribution, SEO analytics and BigQuery automation.</p></article>
-            <article><span>2022 — 2023</span><h3>Icon Hotels</h3><p>GA4 journeys, cross-domain GTM, affiliate analytics, Tableau/Looker dashboards and campaign ROI analysis.</p></article>
-            <article><span>2020 — 2021</span><h3>BYJU'S</h3><p>Audience segmentation, experimentation, funnel optimisation, tracking implementation and BigQuery ETL.</p></article>
-            <article><span>Internship</span><h3>Bosch</h3><p>Dashboard development, KPI monitoring, SQL reporting, data cleansing and business process analytics.</p></article>
-          </div>
-          <div class="education">
-            <article><h3>MSc Data Science</h3><p>Machine Learning • Predictive Analytics • AI • Statistical Modelling • Big Data Analytics</p></article>
-            <article><h3>Bachelor of Engineering</h3><p>Engineering Foundations • Programming • Statistics • Data Analysis • Problem Solving</p></article>
-          </div>
-        </div>
+    <section class="impact-section" id="impact">
+      <div class="container impact-grid">
+        <article class="impact-card reveal">
+          <i>£</i>
+          <h3>£10M+</h3>
+          <p>Revenue Impact</p>
+        </article>
+        <article class="impact-card reveal">
+          <i>♙</i>
+          <h3>5M+</h3>
+          <p>Sessions Analysed</p>
+        </article>
+        <article class="impact-card reveal">
+          <i>&lt;/&gt;</i>
+          <h3>50+</h3>
+          <p>Tracking Implementations</p>
+        </article>
+        <article class="impact-card reveal">
+          <i>▦</i>
+          <h3>20+</h3>
+          <p>Dashboards Built</p>
+        </article>
+        <article class="impact-card reveal">
+          <i>↗</i>
+          <h3>15%</h3>
+          <p>Campaign Uplift</p>
+        </article>
+        <article class="impact-card reveal">
+          <i>◎</i>
+          <h3>12%</h3>
+          <p>Marketing ROI Improvement</p>
+        </article>
       </div>
     </section>
 
-    <section class="content-section" id="expertise">
-      <div class="section-wrap">
-        <p class="section-label">EXPERTISE</p>
-        <h2>Analytics capabilities built around commercial outcomes.</h2>
+    <section class="about-section section" id="about">
+      <div class="container narrow reveal">
+        <p class="eyebrow center">About</p>
+        <h2 class="section-title center">A little bit about me</h2>
+        <p class="about-text">
+          I'm a results-driven Digital, Web & Product Analyst based in London with 5+ years of experience delivering measurable
+          revenue impact across retail, ecommerce, AI and product-led environments. I specialise in end-to-end tracking
+          (GTM, Tealium), multi-touch attribution, MMM, A/B experimentation, AI/ML use cases and executive-ready dashboards.
+          I enjoy partnering with product, engineering and marketing teams to convert behavioural signals into growth strategies
+          that cut cost, lift conversion and scale ROI.
+        </p>
+      </div>
+    </section>
+
+    <section class="expertise-section section" id="expertise">
+      <div class="container">
+        <p class="eyebrow">Expertise</p>
+        <h2 class="section-title">Tools & disciplines I work with</h2>
+
         <div class="expertise-grid">
-          <article><b>01</b><h3>Digital Analytics</h3><p>GA4, Adobe Analytics, CJA, funnels, CRO and web behaviour insights.</p></article>
-          <article><b>02</b><h3>Marketing Analytics</h3><p>MMM, attribution, ROAS, CPA, SEO, paid media and budget optimisation.</p></article>
-          <article><b>03</b><h3>Product Analytics</h3><p>User journeys, retention, cohorts, feature behaviour and product intelligence.</p></article>
-          <article><b>04</b><h3>AI & Machine Learning</h3><p>Segmentation, churn, CLV, propensity, predictive analytics and recommendations.</p></article>
+          <article class="expertise-card reveal">
+            <h3>Analytics</h3>
+            <div class="pills">
+              <span>GA4</span><span>Adobe Analytics</span><span>Adobe CJA</span><span>Looker</span><span>Hotjar</span>
+            </div>
+          </article>
+          <article class="expertise-card reveal">
+            <h3>Tracking</h3>
+            <div class="pills">
+              <span>Google Tag Manager</span><span>Tealium</span><span>Firebase</span><span>Adobe Launch</span>
+            </div>
+          </article>
+          <article class="expertise-card reveal">
+            <h3>Data & SQL</h3>
+            <div class="pills">
+              <span>Snowflake</span><span>BigQuery</span><span>GCP</span><span>MySQL</span><span>dbt</span><span>Fivetran</span>
+            </div>
+          </article>
+          <article class="expertise-card reveal">
+            <h3>Visualisation</h3>
+            <div class="pills">
+              <span>Tableau</span><span>Power BI</span><span>Looker Studio</span>
+            </div>
+          </article>
+          <article class="expertise-card reveal">
+            <h3>Programming & ML</h3>
+            <div class="pills">
+              <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>SQL</span><span>HTML/CSS</span>
+            </div>
+          </article>
+          <article class="expertise-card reveal">
+            <h3>Channels</h3>
+            <div class="pills">
+              <span>SEO</span><span>SEM / PPC</span><span>Paid Social</span><span>Google Ads</span><span>Email</span><span>Affiliate</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="content-section" id="about">
-      <div class="section-wrap">
-        <p class="section-label">ABOUT</p>
-        <h2>Digital analytics, product intelligence and customer insight for growth.</h2>
-        <p class="about-copy">I specialise in transforming behavioural data into clear business recommendations that improve conversion, retention, acquisition efficiency and marketing ROI. My experience spans Sainsbury's UK, UWE Bristol, Icon Hotels, BYJU'S and Bosch, with a focus on full-funnel analytics, experimentation, tracking implementation, attribution, MMM, AI/ML and executive reporting.</p>
+    <section class="experience-section section" id="experience">
+      <div class="container">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+
+        <div class="timeline">
+          <article class="experience-card reveal">
+            <div>
+              <h3>Digital Analyst</h3>
+              <h4>Sainsbury's UK</h4>
+              <ul>
+                <li>£10M+ revenue impact via funnel analysis across 5M+ monthly sessions using GA4, Adobe CJA and Tealium.</li>
+                <li>MMM across SEO, paid, social and display improved marketing ROI by 12%.</li>
+                <li>Engineered 20+ KPI dashboards in Snowflake and Power BI, cutting reporting turnaround by 60%.</li>
+                <li>Added Product Analytics, AI/ML and predictive insight use cases for customer intelligence.</li>
+              </ul>
+            </div>
+            <time>Oct 2023 – Present</time>
+          </article>
+
+          <article class="experience-card reveal">
+            <div>
+              <h3>Digital Analyst</h3>
+              <h4>University of West of England, Bristol</h4>
+              <ul>
+                <li>Deployed GA + GTM tracking and A/B tests via Google Optimize, increasing campaign conversions by 15%.</li>
+                <li>Built BigQuery views and Tableau attribution models, cutting reporting preparation by 40%.</li>
+                <li>Audited 500+ organic keywords, driving 9% organic traffic growth with zero media spend.</li>
+              </ul>
+            </div>
+            <time>Aug 2023 – Oct 2023</time>
+          </article>
+
+          <article class="experience-card reveal">
+            <div>
+              <h3>Marketing Data Analyst</h3>
+              <h4>Icon Hotels</h4>
+              <ul>
+                <li>Implemented cross-domain GTM + GA4 journeys, improving conversions by 7% and reducing drop-offs by 14%.</li>
+                <li>Built Tableau and Looker dashboards that grew organic page views by 8% and leads by 13%.</li>
+                <li>Reallocated paid budget, saving $350K in wasteful spend.</li>
+              </ul>
+            </div>
+            <time>Sept 2022 – July 2023</time>
+          </article>
+
+          <article class="experience-card reveal">
+            <div>
+              <h3>Digital Data Analyst</h3>
+              <h4>BYJU'S</h4>
+              <ul>
+                <li>Optimised campaign targeting, audience segmentation and funnel measurement.</li>
+                <li>Supported experimentation, tracking implementation and BigQuery ETL workflows.</li>
+                <li>Improved engagement and revenue through analytics-backed customer targeting.</li>
+              </ul>
+            </div>
+            <time>2020 – 2021</time>
+          </article>
+
+          <article class="experience-card reveal">
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <h4>Bosch</h4>
+              <ul>
+                <li>Built dashboards, monitored KPIs, prepared SQL reports and cleaned business datasets.</li>
+                <li>Supported campaign, lead and operational reporting through analytics automation.</li>
+              </ul>
+            </div>
+            <time>Internship</time>
+          </article>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <h3>MSc Data Science</h3>
+            <p>Machine Learning • Predictive Analytics • AI • Statistical Modelling • Big Data Analytics</p>
+          </article>
+          <article class="education-card reveal">
+            <h3>Bachelor of Engineering</h3>
+            <p>Engineering Foundations • Programming • Statistics • Data Analysis • Problem Solving</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="content-section contact-section" id="contact">
-      <div class="section-wrap contact-card">
-        <div>
-          <p class="section-label">CONTACT</p>
-          <h2>Let's build data-driven growth.</h2>
-          <p>Open to Digital Analytics, Product Analytics, Marketing Analytics and AI/ML analytics roles.</p>
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <div>
+            <p class="eyebrow">Featured Projects</p>
+            <h2 class="section-title">Data-driven solutions to real business problems</h2>
+          </div>
+          <div class="project-controls">
+            <button id="projectPrev" aria-label="Previous project">‹</button>
+            <button id="projectNext" aria-label="Next project">›</button>
+          </div>
         </div>
-        <div class="contact-links">
-          <a href="mailto:kaushiksomashekar@gmail.com">kaushiksomashekar@gmail.com</a>
-          <a href="https://www.linkedin.com/in/kaushik-somashekar/" target="_blank">linkedin.com/in/kaushik-somashekar</a>
-          <a href="https://github.com/kaushiks1" target="_blank">github.com/kaushiks1</a>
-          <span>London, United Kingdom</span>
+
+        <div class="project-window">
+          <div class="project-track" id="projectTrack">
+            <article class="project-card">
+              <span>Machine Learning</span>
+              <div class="project-icon">⌘</div>
+              <h3>Customer Segmentation</h3>
+              <p>K-Means + RFM segmentation across users to power lifecycle marketing.</p>
+              <div class="chips"><b>Python</b><b>Scikit-learn</b></div>
+              <a href="https://github.com/kaushiks1/Online_web_customer_segmentation_ML" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Marketing Analytics</span>
+              <div class="project-icon">⌘</div>
+              <h3>Marketing Mix Modelling</h3>
+              <p>MMM across SEO, paid and social to reallocate budget for improved ROI.</p>
+              <div class="chips"><b>Python</b><b>Statsmodels</b></div>
+              <a href="https://github.com/kaushiks1/Marketing-mix-modelling" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Recommendation</span>
+              <div class="project-icon">⌘</div>
+              <h3>Product Recommendation Engine</h3>
+              <p>Cosine-similarity recommender for ecommerce personalisation and basket growth.</p>
+              <div class="chips"><b>Python</b><b>Cosine Similarity</b></div>
+              <a href="https://github.com/kaushiks1/product_recommendation_engine" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Predictive</span>
+              <div class="project-icon">⌘</div>
+              <h3>Propensity to Purchase</h3>
+              <p>Random forest model scoring users by likelihood to convert.</p>
+              <div class="chips"><b>Python</b><b>Random Forest</b></div>
+              <a href="https://github.com/kaushiks1/propensity_to_purchase_model" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Customer Analytics</span>
+              <div class="project-icon">⌘</div>
+              <h3>Customer Journey Analysis</h3>
+              <p>Multi-touch journey analysis mapping user paths and bottlenecks.</p>
+              <div class="chips"><b>SQL</b><b>BigQuery</b></div>
+              <a href="https://github.com/kaushiks1/customer_journey_path_analysis" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Web Analytics</span>
+              <div class="project-icon">⌘</div>
+              <h3>GA4 Funnel Analysis</h3>
+              <p>GA4 ecommerce funnel analysis from session_start to purchase.</p>
+              <div class="chips"><b>GA4</b><b>Python</b></div>
+              <a href="https://github.com/kaushiks1/ga4_ecommerce_funnel_analysis" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Experimentation</span>
+              <div class="project-icon">⌘</div>
+              <h3>Web A/B Testing Framework</h3>
+              <p>Conversion testing framework with lift, confidence intervals and sample sizing.</p>
+              <div class="chips"><b>Python</b><b>Stats</b></div>
+              <a href="https://github.com/kaushiks1/web_ab_testing_framework" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Data Visualisation</span>
+              <div class="project-icon">⌘</div>
+              <h3>Campaign Performance Dashboard</h3>
+              <p>Marketing dashboard covering ROAS, CPA, CTR, CVR, spend and revenue.</p>
+              <div class="chips"><b>Power BI</b><b>SQL</b></div>
+              <a href="https://github.com/kaushiks1/campaign_performance_analytics_dashboard" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Customer Intelligence</span>
+              <div class="project-icon">⌘</div>
+              <h3>Customer Lifetime Value</h3>
+              <p>CLV prediction for retention, CRM and customer prioritisation strategy.</p>
+              <div class="chips"><b>Python</b><b>ML</b></div>
+              <a href="https://github.com/kaushiks1/customer_lifetime_value_prediction" target="_blank">View Project →</a>
+            </article>
+
+            <article class="project-card">
+              <span>Machine Learning</span>
+              <div class="project-icon">⌘</div>
+              <h3>Customer Churn Prediction</h3>
+              <p>Churn risk model for lifecycle retention and targeted CRM action.</p>
+              <div class="chips"><b>Python</b><b>Classification</b></div>
+              <a href="https://github.com/kaushiks1/customer_churn_prediction" target="_blank">View Project →</a>
+            </article>
+          </div>
         </div>
+
+        <div class="project-dots" id="projectDots"></div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="container contact-card reveal">
+        <p class="eyebrow center">Contact</p>
+        <h2>Let's turn your data into growth</h2>
+        <p>
+          Open to senior analytics, product analytics and data science roles. Happy to chat about experimentation,
+          attribution, ML and everything in between.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:kaushiksomashekar@gmail.com">
+            <span>✉</span>
+            <small>Email</small>
+            <b>kaushiksomashekar@gmail.com</b>
+          </a>
+          <a href="tel:+447436876417">
+            <span>♧</span>
+            <small>Phone</small>
+            <b>+44 7436 876417</b>
+          </a>
+          <a href="https://www.linkedin.com/in/kaushik-somashekar/" target="_blank">
+            <span>in</span>
+            <small>LinkedIn</small>
+            <b>/kaushik-somashekar</b>
+          </a>
+        </div>
+
+        <a class="download-bottom" href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" target="_blank">Download Resume</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© 2026 Kaushik Somashekar. Digital Analytics Portfolio.</footer>
+  <footer class="footer"></footer>
 </body>
 </html>
