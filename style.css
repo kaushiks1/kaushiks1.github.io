@@ -191,12 +191,10 @@ a {
   text-align: center;
 }
 
-.hero h1 {
-  font-size: clamp(3rem, 5vw, 5.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-  max-width: 760px;
-  margin-bottom: 1.6rem;
+.hero h1{
+    font-size: 4.4rem;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
 }
 
 .hero h1 span {
