@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kaushik Somashekar | Digital Analytics Portfolio</title>
   <meta name="description" content="Digital & Marketing Analytics, Product Analytics, AI/ML and Customer Intelligence portfolio of Kaushik Somashekar."/>
@@ -13,15 +13,16 @@
 </head>
 
 <body>
-  <div class="page-progress" id="pageProgress"></div>
+  <div class="bg-noise"></div>
+  <div class="progress" id="progress"></div>
 
-  <header class="topbar" id="topbar">
-    <nav class="nav-shell">
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation">
+  <header class="header" id="header">
+    <nav class="nav">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-menu" id="navMenu">
+      <ul class="nav-list" id="navList">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -32,116 +33,129 @@
       </ul>
 
       <div class="nav-actions">
-        <a href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" class="resume-btn" target="_blank">⌄ Download Resume</a>
-        <button class="theme-dot" aria-label="Theme">☼</button>
+        <a class="resume-btn" href="KAUSHIK_SOMASHEKAR_3026_1 2.pdf" target="_blank">Download Resume</a>
+        <button class="theme-btn" aria-label="Theme toggle">☼</button>
       </div>
     </nav>
   </header>
 
-  <main id="home">
-    <section class="hero-section">
-      <div class="wave-layer"></div>
+  <main>
+    <section class="hero" id="home">
+      <div class="data-wave"></div>
 
-      <div class="hero-container">
-        <div class="hero-copy reveal">
+      <div class="hero-wrap">
+        <div class="hero-left reveal">
           <p class="eyebrow">DIGITAL & MARKETING ANALYTICS • PRODUCT ANALYTICS • AI/ML • CUSTOMER INTELLIGENCE</p>
 
           <h1>
-            Turning Customer Behaviour,<br/>
-            Product Intelligence and Digital Analytics<br/>
+            Turning Customer Behaviour,<br>
+            Product Intelligence and Digital Analytics<br>
             into <span>Business Growth.</span>
           </h1>
 
-          <p class="hero-subtext">
+          <p class="hero-text">
             5+ years of driving data-driven decisions across Retail, Ecommerce, Education and Product-led businesses.
           </p>
 
-          <div class="hero-buttons">
-            <a class="primary-btn" href="#projects">View My Work <span>→</span></a>
-            <a class="outline-btn" href="#impact">⌄ See My Impact <span>▥</span></a>
-            <a class="play-link" href="#journey">
-              <span class="play-circle">▶</span>
-              <span>Explore<br/>My Journey</span>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work <span>→</span></a>
+            <a href="#impact" class="btn btn-outline">See My Impact <span>▥</span></a>
+            <a href="#journey" class="journey-cta">
+              <span class="play">▶</span>
+              <span>Explore<br>My Journey</span>
             </a>
           </div>
         </div>
 
-        <aside class="profile-card reveal delay-one">
-          <div class="profile-inner">
-            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-img"
-              onerror="this.style.display='none';document.querySelector('.profile-fallback').style.display='grid';"/>
-            <div class="profile-fallback">KS</div>
+        <aside class="profile-card reveal delay-1">
+          <div class="profile-main">
+            <img src="kaushik.jpg" alt="Kaushik Somashekar" class="profile-photo" onerror="this.style.display='none';document.querySelector('.photo-fallback').style.display='grid';"/>
+            <div class="photo-fallback">KS</div>
 
             <h2>Kaushik Somashekar</h2>
-            <p class="role-line">Digital Analyst <span>•</span> Product Analyst</p>
-            <p class="role-line">Marketing Data Analyst</p>
+            <p>Digital Analyst <span>•</span> Product Analyst</p>
+            <p>Marketing Data Analyst</p>
             <p class="location">⌖ London, UK</p>
           </div>
 
-          <div class="profile-divider"></div>
+          <div class="divider"></div>
 
-          <div class="profile-skills">
-            <button class="skill-nav" id="skillPrev">‹</button>
-
-            <div class="skill-window">
+          <div class="skills-shell">
+            <button class="skill-arrow" id="skillPrev">‹</button>
+            <div class="skills-window">
               <h3>CORE SKILLS</h3>
-              <div class="skill-track" id="skillTrack">
-                <div class="skill-item"><div class="skill-icon orange">▮▮▮</div><small>GA4</small></div>
-                <div class="skill-item"><div class="skill-icon purple">◉</div><small>Adobe<br/>Analytics</small></div>
-                <div class="skill-item"><div class="skill-icon teal">⌬</div><small>CJA</small></div>
-                <div class="skill-item"><div class="skill-icon blue">◆</div><small>GTM</small></div>
-                <div class="skill-item"><div class="skill-icon cyan">❄</div><small>Snowflake</small></div>
-                <div class="skill-item"><div class="skill-icon blue">⌕</div><small>BigQuery</small></div>
-                <div class="skill-item"><div class="skill-icon yellow">🐍</div><small>Python</small></div>
-                <div class="skill-item"><div class="skill-icon cyan">▤</div><small>SQL</small></div>
-                <div class="skill-item"><div class="skill-icon teal">▧</div><small>Tealium</small></div>
-                <div class="skill-item"><div class="skill-icon blue">▥</div><small>Power BI</small></div>
-                <div class="skill-item"><div class="skill-icon purple">◌</div><small>Tableau</small></div>
-                <div class="skill-item"><div class="skill-icon teal">A/B</div><small>A/B<br/>Testing</small></div>
-                <div class="skill-item"><div class="skill-icon cyan">AI</div><small>AI/ML</small></div>
-                <div class="skill-item"><div class="skill-icon orange">◎</div><small>Attribution</small></div>
-                <div class="skill-item"><div class="skill-icon teal">↗</div><small>Product<br/>Analytics</small></div>
+              <div class="skills-track" id="skillsTrack">
+                <div class="skill"><div class="icon orange">▮▮▮</div><small>GA4</small></div>
+                <div class="skill"><div class="icon purple">◉</div><small>Adobe<br>Analytics</small></div>
+                <div class="skill"><div class="icon teal">⌬</div><small>CJA</small></div>
+                <div class="skill"><div class="icon blue">◆</div><small>GTM</small></div>
+                <div class="skill"><div class="icon teal">▧</div><small>Tealium</small></div>
+                <div class="skill"><div class="icon cyan">❄</div><small>Snowflake</small></div>
+                <div class="skill"><div class="icon cyan">BQ</div><small>BigQuery</small></div>
+                <div class="skill"><div class="icon yellow">🐍</div><small>Python</small></div>
+                <div class="skill"><div class="icon cyan">SQL</div><small>SQL</small></div>
+                <div class="skill"><div class="icon blue">▥</div><small>Power BI</small></div>
+                <div class="skill"><div class="icon purple">◌</div><small>Tableau</small></div>
+                <div class="skill"><div class="icon teal">A/B</div><small>A/B<br>Testing</small></div>
+                <div class="skill"><div class="icon orange">◎</div><small>Attribution</small></div>
+                <div class="skill"><div class="icon cyan">AI</div><small>AI/ML</small></div>
+                <div class="skill"><div class="icon teal">↗</div><small>Product<br>Analytics</small></div>
               </div>
             </div>
-
-            <button class="skill-nav" id="skillNext">›</button>
+            <button class="skill-arrow" id="skillNext">›</button>
           </div>
-
-          <div class="skill-dots" id="skillDots"></div>
+          <div class="dots" id="skillDots"></div>
         </aside>
       </div>
 
-      <section class="impact-strip" id="impact">
-        <article class="metric-card reveal"><div class="metric-icon">£</div><div><h3>£10M+</h3><p>Revenue Impact</p></div></article>
-        <article class="metric-card reveal delay-one"><div class="metric-icon">♙</div><div><h3>5M+</h3><p>Monthly Sessions<br/>Analysed</p></div></article>
-        <article class="metric-card reveal delay-two"><div class="metric-icon">▧</div><div><h3>20+</h3><p>Dashboards<br/>Built</p></div></article>
-        <article class="metric-card reveal"><div class="metric-icon">&lt;/&gt;</div><div><h3>50+</h3><p>Tracking<br/>Implementations</p></div></article>
-        <article class="metric-card reveal delay-one"><div class="metric-icon">↗</div><div><h3>15%</h3><p>Campaign<br/>Uplift</p></div></article>
-        <article class="metric-card reveal delay-two"><div class="metric-icon">◎</div><div><h3>12%</h3><p>Marketing ROI<br/>Improvement</p></div></article>
+      <section class="metrics" id="impact">
+        <article class="metric reveal">
+          <div class="metric-icon">£</div>
+          <div><h3>£10M+</h3><p>Revenue Impact</p></div>
+        </article>
+        <article class="metric reveal delay-1">
+          <div class="metric-icon">♙</div>
+          <div><h3>5M+</h3><p>Monthly Sessions<br>Analysed</p></div>
+        </article>
+        <article class="metric reveal delay-2">
+          <div class="metric-icon">▧</div>
+          <div><h3>20+</h3><p>Dashboards<br>Built</p></div>
+        </article>
+        <article class="metric reveal">
+          <div class="metric-icon">&lt;/&gt;</div>
+          <div><h3>50+</h3><p>Tracking<br>Implementations</p></div>
+        </article>
+        <article class="metric reveal delay-1">
+          <div class="metric-icon">↗</div>
+          <div><h3>15%</h3><p>Campaign<br>Uplift</p></div>
+        </article>
+        <article class="metric reveal delay-2">
+          <div class="metric-icon">◎</div>
+          <div><h3>12%</h3><p>Marketing ROI<br>Improvement</p></div>
+        </article>
       </section>
     </section>
 
-    <section class="projects-block" id="projects">
-      <div class="projects-head">
+    <section class="projects" id="projects">
+      <div class="projects-header">
         <div>
-          <p class="section-eyebrow">FEATURED PROJECTS</p>
+          <p class="section-label">FEATURED PROJECTS</p>
           <h2>Data-driven solutions to real business problems</h2>
         </div>
-
-        <div class="carousel-actions">
-          <a href="https://github.com/kaushiks1?tab=repositories" target="_blank" class="all-projects">▢ View All Projects</a>
-          <button id="projectPrev" class="circle-btn">‹</button>
-          <button id="projectNext" class="circle-btn">›</button>
+        <div class="project-actions">
+          <a href="https://github.com/kaushiks1?tab=repositories" class="view-all" target="_blank">▢ View All Projects</a>
+          <button class="circle-control" id="prevProject">‹</button>
+          <button class="circle-control" id="nextProject">›</button>
         </div>
       </div>
 
-      <button class="side-arrow left" id="projectPrevSide">‹</button>
-      <button class="side-arrow right" id="projectNextSide">›</button>
+      <button class="floating-arrow floating-left" id="prevSide">‹</button>
+      <button class="floating-arrow floating-right" id="nextSide">›</button>
 
-      <div class="carousel-window">
+      <div class="project-window">
         <div class="project-track" id="projectTrack">
           <article class="project-card">
-            <div class="project-img img-seg"></div>
+            <div class="project-image seg"></div>
             <span class="badge ml">MACHINE LEARNING</span>
             <h3>Online Web Customer Segmentation (ML)</h3>
             <div class="chips"><span>Python</span><span>Scikit-learn</span></div>
@@ -149,7 +163,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-mmm"></div>
+            <div class="project-image mmm"></div>
             <span class="badge marketing">MARKETING ANALYTICS</span>
             <h3>Marketing Mix Modelling</h3>
             <div class="chips"><span>Python</span><span>Statsmodels</span></div>
@@ -157,15 +171,15 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-rec"></div>
-            <span class="badge rec">RECOMMENDATION SYSTEM</span>
+            <div class="project-image rec"></div>
+            <span class="badge recommender">RECOMMENDATION SYSTEM</span>
             <h3>Product Recommendation Engine</h3>
             <div class="chips"><span>Python</span><span>Cosine Similarity</span></div>
             <a href="https://github.com/kaushiks1/product_recommendation_engine" target="_blank">View Project →</a>
           </article>
 
           <article class="project-card">
-            <div class="project-img img-prop"></div>
+            <div class="project-image propensity"></div>
             <span class="badge predictive">PREDICTIVE MODELLING</span>
             <h3>Propensity to Purchase Model</h3>
             <div class="chips"><span>Python</span><span>Random Forest</span></div>
@@ -173,7 +187,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-journey"></div>
+            <div class="project-image journey"></div>
             <span class="badge customer">CUSTOMER ANALYTICS</span>
             <h3>Customer Journey Path Analysis</h3>
             <div class="chips"><span>SQL</span><span>BigQuery</span></div>
@@ -181,7 +195,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-funnel"></div>
+            <div class="project-image funnel"></div>
             <span class="badge web">WEB ANALYTICS</span>
             <h3>GA4 Ecommerce Funnel Analysis</h3>
             <div class="chips"><span>GA4</span><span>Looker Studio</span></div>
@@ -189,7 +203,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-ab"></div>
+            <div class="project-image ab"></div>
             <span class="badge testing">EXPERIMENTATION</span>
             <h3>Web A/B Testing Framework</h3>
             <div class="chips"><span>Python</span><span>Stats</span></div>
@@ -197,7 +211,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-dashboard"></div>
+            <div class="project-image dashboard"></div>
             <span class="badge viz">DATA VISUALISATION</span>
             <h3>Marketing Performance Dashboard</h3>
             <div class="chips"><span>Power BI</span><span>SQL</span></div>
@@ -205,7 +219,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-clv"></div>
+            <div class="project-image clv"></div>
             <span class="badge predictive">CUSTOMER INTELLIGENCE</span>
             <h3>Customer Lifetime Value Prediction</h3>
             <div class="chips"><span>Python</span><span>ML</span></div>
@@ -213,7 +227,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img img-churn"></div>
+            <div class="project-image churn"></div>
             <span class="badge ml">MACHINE LEARNING</span>
             <h3>Customer Churn Prediction</h3>
             <div class="chips"><span>Python</span><span>Classification</span></div>
@@ -221,15 +235,13 @@
           </article>
         </div>
       </div>
-
       <div class="project-dots" id="projectDots"></div>
     </section>
 
-    <section class="journey-section" id="journey">
+    <section class="content-section" id="journey">
       <div class="section-wrap">
-        <p class="section-eyebrow">MY JOURNEY</p>
+        <p class="section-label">MY JOURNEY</p>
         <h2>From Engineering to Data Science, Product Analytics and Digital Growth.</h2>
-
         <div class="journey-grid">
           <div class="timeline">
             <article><span>2023 — Present</span><h3>Sainsbury's UK</h3><p>Digital Analytics, Product Analytics, AI & Machine Learning, Customer Intelligence, Experimentation, Attribution and Predictive Analytics.</p></article>
@@ -238,8 +250,7 @@
             <article><span>2020 — 2021</span><h3>BYJU'S</h3><p>Audience segmentation, experimentation, funnel optimisation, tracking implementation and BigQuery ETL.</p></article>
             <article><span>Internship</span><h3>Bosch</h3><p>Dashboard development, KPI monitoring, SQL reporting, data cleansing and business process analytics.</p></article>
           </div>
-
-          <div class="education-grid">
+          <div class="education">
             <article><h3>MSc Data Science</h3><p>Machine Learning • Predictive Analytics • AI • Statistical Modelling • Big Data Analytics</p></article>
             <article><h3>Bachelor of Engineering</h3><p>Engineering Foundations • Programming • Statistics • Data Analysis • Problem Solving</p></article>
           </div>
@@ -247,11 +258,11 @@
       </div>
     </section>
 
-    <section class="expertise-section" id="expertise">
+    <section class="content-section" id="expertise">
       <div class="section-wrap">
-        <p class="section-eyebrow">EXPERTISE</p>
+        <p class="section-label">EXPERTISE</p>
         <h2>Analytics capabilities built around commercial outcomes.</h2>
-        <div class="expert-grid">
+        <div class="expertise-grid">
           <article><b>01</b><h3>Digital Analytics</h3><p>GA4, Adobe Analytics, CJA, funnels, CRO and web behaviour insights.</p></article>
           <article><b>02</b><h3>Marketing Analytics</h3><p>MMM, attribution, ROAS, CPA, SEO, paid media and budget optimisation.</p></article>
           <article><b>03</b><h3>Product Analytics</h3><p>User journeys, retention, cohorts, feature behaviour and product intelligence.</p></article>
@@ -260,10 +271,18 @@
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
+    <section class="content-section" id="about">
+      <div class="section-wrap">
+        <p class="section-label">ABOUT</p>
+        <h2>Digital analytics, product intelligence and customer insight for growth.</h2>
+        <p class="about-copy">I specialise in transforming behavioural data into clear business recommendations that improve conversion, retention, acquisition efficiency and marketing ROI. My experience spans Sainsbury's UK, UWE Bristol, Icon Hotels, BYJU'S and Bosch, with a focus on full-funnel analytics, experimentation, tracking implementation, attribution, MMM, AI/ML and executive reporting.</p>
+      </div>
+    </section>
+
+    <section class="content-section contact-section" id="contact">
       <div class="section-wrap contact-card">
         <div>
-          <p class="section-eyebrow">CONTACT</p>
+          <p class="section-label">CONTACT</p>
           <h2>Let's build data-driven growth.</h2>
           <p>Open to Digital Analytics, Product Analytics, Marketing Analytics and AI/ML analytics roles.</p>
         </div>

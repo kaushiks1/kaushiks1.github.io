@@ -1,37 +1,28 @@
-const topbar = document.getElementById("topbar");
-const progress = document.getElementById("pageProgress");
-const mobileToggle = document.getElementById("mobileToggle");
-const navMenu = document.getElementById("navMenu");
+const header = document.getElementById("header");
+const progress = document.getElementById("progress");
+const hamburger = document.getElementById("hamburger");
+const navList = document.getElementById("navList");
 
-mobileToggle?.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
-
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => navMenu.classList.remove("open"));
-});
+hamburger?.addEventListener("click", () => navList.classList.toggle("open"));
+document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", () => navList.classList.remove("open")));
 
 window.addEventListener("scroll", () => {
-  topbar.classList.toggle("scrolled", window.scrollY > 20);
+  header.classList.toggle("scrolled", window.scrollY > 20);
   const max = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.width = `${(window.scrollY / max) * 100}%`;
   updateActiveNav();
 });
 
-const sections = document.querySelectorAll("section[id], main[id]");
+const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
-
 function updateActiveNav(){
   let current = "home";
   sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 130) current = section.id;
+    if(window.scrollY >= section.offsetTop - 130) current = section.id;
   });
-  navLinks.forEach(link => {
-    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
-  });
+  navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${current}`));
 }
 
-/* Reveal */
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -39,23 +30,20 @@ const revealObserver = new IntersectionObserver(entries => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, {threshold:.12});
-
+},{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 /* Skills carousel */
-const skillTrack = document.getElementById("skillTrack");
+const skillsTrack = document.getElementById("skillsTrack");
 const skillPrev = document.getElementById("skillPrev");
 const skillNext = document.getElementById("skillNext");
 const skillDots = document.getElementById("skillDots");
 let skillPage = 0;
-
 function skillsPerPage(){ return window.innerWidth < 760 ? 4 : 6; }
-function skillPages(){ return Math.ceil(document.querySelectorAll(".skill-item").length / skillsPerPage()); }
-
+function totalSkillPages(){ return Math.ceil(document.querySelectorAll(".skill").length / skillsPerPage()); }
 function drawSkillDots(){
   skillDots.innerHTML = "";
-  for(let i=0;i<skillPages();i++){
+  for(let i=0;i<totalSkillPages();i++){
     const dot = document.createElement("span");
     dot.className = i === skillPage ? "active" : "";
     dot.onclick = () => { skillPage = i; updateSkills(); };
@@ -63,37 +51,33 @@ function drawSkillDots(){
   }
 }
 function updateSkills(){
-  const item = document.querySelector(".skill-item");
+  const item = document.querySelector(".skill");
   if(!item) return;
   const gap = 13.6;
-  const shift = skillPage * skillsPerPage() * (item.offsetWidth + gap);
-  skillTrack.style.transform = `translateX(-${shift}px)`;
+  skillsTrack.style.transform = `translateX(-${skillPage * skillsPerPage() * (item.offsetWidth + gap)}px)`;
   drawSkillDots();
 }
-skillNext.onclick = () => { skillPage = (skillPage + 1) % skillPages(); updateSkills(); };
-skillPrev.onclick = () => { skillPage = (skillPage - 1 + skillPages()) % skillPages(); updateSkills(); };
-setInterval(() => { skillPage = (skillPage + 1) % skillPages(); updateSkills(); }, 3300);
+skillNext.onclick = () => { skillPage = (skillPage + 1) % totalSkillPages(); updateSkills(); };
+skillPrev.onclick = () => { skillPage = (skillPage - 1 + totalSkillPages()) % totalSkillPages(); updateSkills(); };
+setInterval(() => { skillPage = (skillPage + 1) % totalSkillPages(); updateSkills(); }, 3300);
 
 /* Project carousel */
 const projectTrack = document.getElementById("projectTrack");
-const projectPrev = document.getElementById("projectPrev");
-const projectNext = document.getElementById("projectNext");
-const projectPrevSide = document.getElementById("projectPrevSide");
-const projectNextSide = document.getElementById("projectNextSide");
+const prevProject = document.getElementById("prevProject");
+const nextProject = document.getElementById("nextProject");
+const prevSide = document.getElementById("prevSide");
+const nextSide = document.getElementById("nextSide");
 const projectDots = document.getElementById("projectDots");
 let projectPage = 0;
-
-function cardsVisible(){
+function visibleCards(){
   if(window.innerWidth < 760) return 1;
   if(window.innerWidth < 1100) return 3;
   return 7;
 }
-function projectPages(){
-  return Math.ceil(document.querySelectorAll(".project-card").length / cardsVisible());
-}
+function totalProjectPages(){ return Math.ceil(document.querySelectorAll(".project-card").length / visibleCards()); }
 function drawProjectDots(){
   projectDots.innerHTML = "";
-  for(let i=0;i<projectPages();i++){
+  for(let i=0;i<totalProjectPages();i++){
     const dot = document.createElement("span");
     dot.className = i === projectPage ? "active" : "";
     dot.onclick = () => { projectPage = i; updateProjects(); };
@@ -103,17 +87,13 @@ function drawProjectDots(){
 function updateProjects(){
   const card = document.querySelector(".project-card");
   if(!card) return;
-  const shift = projectPage * cardsVisible() * (card.offsetWidth + 16);
-  projectTrack.style.transform = `translateX(-${shift}px)`;
+  projectTrack.style.transform = `translateX(-${projectPage * visibleCards() * (card.offsetWidth + 16)}px)`;
   drawProjectDots();
 }
-function nextProject(){ projectPage = (projectPage + 1) % projectPages(); updateProjects(); }
-function prevProject(){ projectPage = (projectPage - 1 + projectPages()) % projectPages(); updateProjects(); }
-projectNext.onclick = nextProject;
-projectNextSide.onclick = nextProject;
-projectPrev.onclick = prevProject;
-projectPrevSide.onclick = prevProject;
-setInterval(nextProject, 5400);
+function goNext(){ projectPage = (projectPage + 1) % totalProjectPages(); updateProjects(); }
+function goPrev(){ projectPage = (projectPage - 1 + totalProjectPages()) % totalProjectPages(); updateProjects(); }
+nextProject.onclick = goNext; nextSide.onclick = goNext; prevProject.onclick = goPrev; prevSide.onclick = goPrev;
+setInterval(goNext, 5400);
 
 window.addEventListener("resize", () => {
   skillPage = 0;
@@ -121,7 +101,6 @@ window.addEventListener("resize", () => {
   updateSkills();
   updateProjects();
 });
-
 updateActiveNav();
 updateSkills();
 updateProjects();

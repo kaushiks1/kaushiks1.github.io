@@ -1,6 +1,6 @@
-# Kaushik Somashekar Portfolio
+# Kaushik Somashekar Portfolio - Final Premium Build
 
-This version is built to match the approved screenshot layout closely.
+This build is designed to match the approved screenshot layout as closely as possible.
 
 ## Upload to GitHub
 
@@ -13,16 +13,16 @@ script.js
 README.md
 ```
 
-Also keep your photo as:
+Also keep/upload:
 
 ```text
 kaushik.jpg
 ```
 
-For the resume button, upload your PDF as:
+For the resume button, upload your resume PDF as:
 
 ```text
 KAUSHIK_SOMASHEKAR_3026_1 2.pdf
 ```
 
-or edit the resume filename in `index.html`.
+or edit the link in `index.html`.
